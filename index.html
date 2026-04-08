@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RTS Credit Intelligence</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0a0a0f;
-    --surface: #12121a;
-    --surface2: #1a1a26;
-    --border: rgba(255,255,255,0.07);
-    --accent: #c9a96e;
-    --accent2: #7b68ee;
-    --text: #e8e6f0;
-    --muted: #6b6880;
-    --success: #4ade80;
-    --danger: #f87171;
-    --product-1: #c9a96e;
+    --bg: #1A1A1B;
+    --surface: #222223;
+    --surface2: #2a2a2b;
+    --border: rgba(249,245,239,0.08);
+    --accent: #3D754E;
+    --accent2: #5a9e6f;
+    --text: #F9F5EF;
+    --muted: #9a9590;
+    --success: #5a9e6f;
+    --danger: #c0392b;
+    --product-1: #3D754E;
     --product-2: #7b68ee;
     --product-3: #34d399;
     --product-4: #60a5fa;
@@ -28,7 +28,7 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
   }
@@ -46,7 +46,7 @@
     border-bottom: 1px solid var(--border);
   }
   .logo-mark {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 22px; font-weight: 900;
     color: var(--accent);
     letter-spacing: -0.5px;
@@ -71,9 +71,9 @@
   }
   .nav-item:hover { background: var(--surface2); color: var(--text); }
   .nav-item.active {
-    background: rgba(201,169,110,0.12);
+    background: rgba(61,117,78,0.15);
     color: var(--accent);
-    border-color: rgba(201,169,110,0.2);
+    border-color: rgba(61,117,78,0.3);
   }
   .nav-icon { font-size: 16px; width: 20px; text-align: center; }
   .sidebar-footer {
@@ -94,7 +94,7 @@
     background: var(--surface);
   }
   .page-header h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 32px; font-weight: 700;
     color: var(--text); letter-spacing: -0.5px;
   }
@@ -136,10 +136,10 @@
   .meta-pill {
     font-size: 11px; padding: 4px 10px; border-radius: 20px;
     background: rgba(255,255,255,0.06); color: var(--muted);
-    font-family: 'DM Mono', monospace;
+    font-family: 'Courier New', monospace;
   }
   .meta-pill.highlight {
-    background: rgba(201,169,110,0.12); color: var(--accent);
+    background: rgba(61,117,78,0.15); color: var(--accent);
   }
 
   /* SIMULATOR */
@@ -164,11 +164,11 @@
     width: 100%; padding: 12px 16px;
     background: var(--bg); border: 1px solid var(--border);
     border-radius: 10px; color: var(--text);
-    font-family: 'DM Sans', sans-serif; font-size: 14px;
+    font-family: 'Ubuntu', sans-serif; font-size: 14px;
     transition: border-color 0.2s; outline: none;
   }
   .form-input:focus, .form-select:focus {
-    border-color: rgba(201,169,110,0.5);
+    border-color: rgba(61,117,78,0.6);
   }
   .form-select option { background: var(--surface); }
   .range-group { display: flex; flex-direction: column; gap: 8px; }
@@ -181,14 +181,14 @@
     background: var(--accent); border-radius: 50%; cursor: pointer;
   }
   .range-value {
-    font-family: 'DM Mono', monospace; font-size: 20px;
+    font-family: 'Courier New', monospace; font-size: 20px;
     color: var(--accent); font-weight: 500;
   }
   .btn-primary {
     width: 100%; padding: 14px;
     background: var(--accent); color: #0a0a0f;
     border: none; border-radius: 10px;
-    font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600;
+    font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 600;
     cursor: pointer; transition: all 0.2s; letter-spacing: 0.3px;
   }
   .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
@@ -208,7 +208,7 @@
   }
   .result-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
   .result-value {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 42px; color: var(--accent);
     font-weight: 700; margin: 8px 0;
   }
@@ -222,7 +222,7 @@
   .result-row:last-child { border-bottom: none; }
   .result-row-label { color: var(--muted); }
   .result-row-val {
-    font-family: 'DM Mono', monospace; font-size: 13px;
+    font-family: 'Courier New', monospace; font-size: 13px;
     color: var(--text); font-weight: 500;
   }
   .result-row-val.positive { color: var(--success); }
@@ -247,21 +247,21 @@
   }
   .kb-nav-item:hover { background: var(--surface2); color: var(--text); }
   .kb-nav-item.active {
-    background: rgba(201,169,110,0.1); color: var(--accent);
+    background: rgba(61,117,78,0.12); color: var(--accent);
   }
   .kb-content {
     background: var(--surface); border: 1px solid var(--border);
     border-radius: 16px; padding: 36px;
   }
   .kb-content h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 26px; font-weight: 700; color: var(--text);
     margin-bottom: 6px;
   }
   .kb-badge {
     display: inline-block; font-size: 11px;
     padding: 4px 12px; border-radius: 20px;
-    background: rgba(201,169,110,0.12); color: var(--accent);
+    background: rgba(61,117,78,0.15); color: var(--accent);
     margin-bottom: 20px; font-weight: 500;
   }
   .kb-section { margin-bottom: 32px; }
@@ -269,7 +269,7 @@
     font-size: 13px; color: var(--accent); font-weight: 600;
     text-transform: uppercase; letter-spacing: 1px;
     margin-bottom: 16px; padding-bottom: 8px;
-    border-bottom: 1px solid rgba(201,169,110,0.2);
+    border-bottom: 1px solid rgba(61,117,78,0.3);
   }
   .kb-text { font-size: 14px; color: #c4c2d0; line-height: 1.8; }
   .kb-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
@@ -283,7 +283,7 @@
     padding: 12px 14px; border-bottom: 1px solid var(--border);
     font-size: 13px; color: var(--text);
   }
-  .kb-table td:last-child { font-family: 'DM Mono', monospace; color: var(--accent); }
+  .kb-table td:last-child { font-family: 'Courier New', monospace; color: var(--accent); }
   .kb-table tr:last-child td { border-bottom: none; }
   .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .pros, .cons {
@@ -377,7 +377,7 @@
     display: flex; align-items: center; justify-content: center;
     font-size: 14px;
   }
-  .msg.user .msg-avatar { background: rgba(201,169,110,0.2); }
+  .msg.user .msg-avatar { background: rgba(61,117,78,0.2); }
   .msg-bubble {
     padding: 12px 16px; border-radius: 12px;
     font-size: 13px; line-height: 1.7; color: var(--text);
@@ -387,7 +387,7 @@
     border-radius: 4px 12px 12px 12px;
   }
   .msg.user .msg-bubble {
-    background: rgba(201,169,110,0.15); border: 1px solid rgba(201,169,110,0.2);
+    background: rgba(61,117,78,0.15); border: 1px solid rgba(61,117,78,0.3);
     border-radius: 12px 4px 12px 12px;
   }
   .chat-input-area {
@@ -398,11 +398,11 @@
     flex: 1; padding: 12px 16px;
     background: var(--bg); border: 1px solid var(--border);
     border-radius: 10px; color: var(--text);
-    font-family: 'DM Sans', sans-serif; font-size: 14px;
+    font-family: 'Ubuntu', sans-serif; font-size: 14px;
     outline: none; resize: none; height: 48px;
     transition: border-color 0.2s;
   }
-  .chat-input:focus { border-color: rgba(201,169,110,0.4); }
+  .chat-input:focus { border-color: rgba(61,117,78,0.5); }
   .chat-send {
     width: 48px; height: 48px;
     background: var(--accent); color: #0a0a0f;
@@ -428,11 +428,11 @@
     padding: 10px 12px; margin-bottom: 6px; border-radius: 8px;
     background: var(--surface2); border: 1px solid var(--border);
     color: var(--text); font-size: 12px; cursor: pointer;
-    font-family: 'DM Sans', sans-serif; transition: all 0.2s;
+    font-family: 'Ubuntu', sans-serif; transition: all 0.2s;
     line-height: 1.5;
   }
   .quick-btn:hover {
-    border-color: rgba(201,169,110,0.3); color: var(--accent);
+    border-color: rgba(61,117,78,0.4); color: var(--accent);
   }
   .typing-indicator {
     display: none; align-items: center; gap: 4px; padding: 8px 0;
@@ -473,7 +473,7 @@
   }
   .stat-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
   .stat-value {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 28px; color: var(--text); font-weight: 700; margin: 8px 0 4px;
   }
   .stat-sub { font-size: 12px; color: var(--muted); }
@@ -486,9 +486,44 @@
     color: var(--success); font-size: 12px; font-weight: 600;
     margin-top: 16px;
   }
+
+  /* BANKER PROFILE */
+  .banker-pill {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 14px; margin: 8px 12px 0;
+    background: rgba(61,117,78,0.1); border: 1px solid rgba(61,117,78,0.25);
+    border-radius: 10px; cursor: pointer; transition: background 0.2s;
+  }
+  .banker-pill:hover { background: rgba(61,117,78,0.18); }
+  .banker-avatar {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: #3D754E; display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; color: white; flex-shrink: 0;
+  }
+  .banker-name { font-size: 12px; font-weight: 600; color: var(--text); }
+  .banker-sub  { font-size: 10px; color: var(--muted); }
 </style>
 </head>
 <body>
+
+<!-- MODAL PERFIL BANKER -->
+<div id="modal-banker" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:2000;align-items:center;justify-content:center;">
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:18px;width:100%;max-width:400px;padding:36px;">
+    <div style="text-align:center;margin-bottom:28px;">
+      <div style="font-size:36px;margin-bottom:12px;">👤</div>
+      <div style="font-size:20px;font-weight:700;color:var(--text);margin-bottom:6px;">Quem está usando?</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.5;">Seus cenários salvos ficam separados por perfil.<br>Insira seu nome para identificar seus registros.</div>
+    </div>
+    <input type="text" id="banker-nome-input" class="form-input"
+      placeholder="Ex: Mateus, João, Ana..."
+      style="font-size:15px;padding:14px 16px;margin-bottom:8px;text-align:center;"
+      onkeydown="if(event.key==='Enter')confirmarBanker()">
+    <div id="banker-profiles-recentes" style="margin-bottom:16px;"></div>
+    <button class="btn-primary" style="width:100%;padding:14px;font-size:14px;" onclick="confirmarBanker()">
+      Entrar →
+    </button>
+  </div>
+</div>
 
 <!-- SIDEBAR -->
 <nav class="sidebar">
@@ -514,6 +549,16 @@
     <div class="nav-section">Assistente</div>
     <div class="nav-item" onclick="goTo('chat')">
       <span class="nav-icon">◎</span> IA Especialista
+    </div>
+    <div class="nav-item" onclick="goTo('saved')">
+      <span class="nav-icon">⊟</span> Cenários Salvos
+    </div>
+  </div>
+  <div class="banker-pill" onclick="trocarBanker()" title="Clique para trocar de perfil">
+    <div class="banker-avatar" id="sidebar-banker-avatar">?</div>
+    <div>
+      <div class="banker-name" id="sidebar-banker-nome">Selecionar perfil</div>
+      <div class="banker-sub">Clique para trocar</div>
     </div>
   </div>
   <div class="sidebar-footer">RTS Partners · v1.0</div>
@@ -553,7 +598,7 @@
     </div>
 
     <div class="products-grid">
-      <div class="product-card" style="--card-color:#c9a96e" onclick="openKB('clean')">
+      <div class="product-card" style="--card-color:#3D754E" onclick="openKB('clean')">
         <div class="product-card-icon">💳</div>
         <h3>Crédito Clean (Pessoal)</h3>
         <p>Sem garantias, aprovação rápida. Ideal para necessidades imediatas e capital de giro pessoal.</p>
@@ -630,43 +675,43 @@
       <div style="display:flex;flex-direction:column;gap:12px;">
         <div>
           <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:13px;">
-            <span>Crédito Clean</span><span style="font-family:'DM Mono',monospace;color:var(--danger)">~2,5% a.m.</span>
+            <span>Crédito Clean</span><span style="font-family:'Courier New',monospace;color:var(--danger)">~2,5% a.m.</span>
           </div>
-          <div class="comparison-bar"><div class="comparison-fill" style="width:100%;background:#c9a96e"></div></div>
+          <div class="comparison-bar"><div class="comparison-fill" style="width:100%;background:#3D754E"></div></div>
         </div>
         <div>
           <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:13px;">
-            <span>Crédito com Garantia</span><span style="font-family:'DM Mono',monospace;color:var(--accent)">~1,1% a.m.</span>
+            <span>Crédito com Garantia</span><span style="font-family:'Courier New',monospace;color:var(--accent)">~1,1% a.m.</span>
           </div>
           <div class="comparison-bar"><div class="comparison-fill" style="width:44%;background:#7b68ee"></div></div>
         </div>
         <div>
           <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:13px;">
-            <span>Financiamento Imobiliário</span><span style="font-family:'DM Mono',monospace;color:var(--accent)">~0,85% a.m.</span>
+            <span>Financiamento Imobiliário</span><span style="font-family:'Courier New',monospace;color:var(--accent)">~0,85% a.m.</span>
           </div>
           <div class="comparison-bar"><div class="comparison-fill" style="width:34%;background:#60a5fa"></div></div>
         </div>
         <div>
           <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:13px;">
-            <span>Home Equity</span><span style="font-family:'DM Mono',monospace;color:var(--success)">~0,87% a.m.</span>
+            <span>Home Equity</span><span style="font-family:'Courier New',monospace;color:var(--success)">~0,87% a.m.</span>
           </div>
           <div class="comparison-bar"><div class="comparison-fill" style="width:35%;background:#34d399"></div></div>
         </div>
         <div>
           <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:13px;">
-            <span>Consórcio</span><span style="font-family:'DM Mono',monospace;color:var(--success)">~0,18% a.m.</span>
+            <span>Consórcio</span><span style="font-family:'Courier New',monospace;color:var(--success)">~0,18% a.m.</span>
           </div>
           <div class="comparison-bar"><div class="comparison-fill" style="width:7%;background:#f472b6"></div></div>
         </div>
         <div>
           <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:13px;">
-            <span>Financiamento de Veículo</span><span style="font-family:'DM Mono',monospace;color:var(--accent)">~1,5% a.m.</span>
+            <span>Financiamento de Veículo</span><span style="font-family:'Courier New',monospace;color:var(--accent)">~1,5% a.m.</span>
           </div>
           <div class="comparison-bar"><div class="comparison-fill" style="width:60%;background:#fb923c"></div></div>
         </div>
         <div>
           <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:13px;">
-            <span>Cred. Garantia Bullet</span><span style="font-family:'DM Mono',monospace;color:var(--accent)">~1,1% a.m. (juros only)</span>
+            <span>Cred. Garantia Bullet</span><span style="font-family:'Courier New',monospace;color:var(--accent)">~1,1% a.m. (juros only)</span>
           </div>
           <div class="comparison-bar"><div class="comparison-fill" style="width:44%;background:#a78bfa"></div></div>
         </div>
@@ -689,13 +734,13 @@
 
     <div style="display:flex;gap:12px;margin-bottom:28px;flex-wrap:wrap;align-items:center;">
       <button onclick="simAddTranche()" id="sim-btn-add"
-        style="padding:11px 18px;background:transparent;border:1px dashed rgba(201,169,110,0.4);border-radius:10px;color:var(--accent);font-family:'DM Sans',sans-serif;font-size:13px;cursor:pointer;font-weight:500;">
+        style="padding:11px 18px;background:transparent;border:1px dashed rgba(61,117,78,0.5);border-radius:10px;color:var(--accent);font-family:'Ubuntu',sans-serif;font-size:13px;cursor:pointer;font-weight:500;">
         + Adicionar tranche
       </button>
       <button class="btn-primary" style="width:auto;padding:12px 28px;" onclick="simCalcular()">
         Calcular →
       </button>
-      <button onclick="simReset()" style="padding:12px 16px;background:transparent;border:1px solid var(--border);border-radius:10px;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:13px;cursor:pointer;">
+      <button onclick="simReset()" style="padding:12px 16px;background:transparent;border:1px solid var(--border);border-radius:10px;color:var(--muted);font-family:'Ubuntu',sans-serif;font-size:13px;cursor:pointer;">
         Limpar
       </button>
     </div>
@@ -717,11 +762,11 @@
         <!-- TABS -->
         <div style="display:flex;gap:0;margin-bottom:20px;border-bottom:1px solid var(--border);">
           <button id="amort-tab-manual" onclick="switchAmortTab('manual')"
-            style="padding:10px 20px;background:transparent;border:none;border-bottom:2px solid var(--accent);color:var(--accent);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;">
+            style="padding:10px 20px;background:transparent;border:none;border-bottom:2px solid var(--accent);color:var(--accent);font-family:'Ubuntu',sans-serif;font-size:13px;font-weight:600;cursor:pointer;">
             Aportes manuais
           </button>
           <button id="amort-tab-quitar" onclick="switchAmortTab('quitar')"
-            style="padding:10px 20px;background:transparent;border:none;border-bottom:2px solid transparent;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;cursor:pointer;">
+            style="padding:10px 20px;background:transparent;border:none;border-bottom:2px solid transparent;color:var(--muted);font-family:'Ubuntu',sans-serif;font-size:13px;font-weight:500;cursor:pointer;">
             Calcular quitação
           </button>
         </div>
@@ -768,7 +813,7 @@
           </div>
           <div style="display:flex;gap:10px;margin-bottom:16px;">
             <button class="btn-primary" style="width:auto;padding:10px 20px;font-size:13px;" onclick="amAdicionar()">+ Adicionar</button>
-            <button onclick="amLimpar()" style="padding:10px 14px;background:transparent;border:1px solid var(--border);border-radius:10px;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:13px;cursor:pointer;">Limpar</button>
+            <button onclick="amLimpar()" style="padding:10px 14px;background:transparent;border:1px solid var(--border);border-radius:10px;color:var(--muted);font-family:'Ubuntu',sans-serif;font-size:13px;cursor:pointer;">Limpar</button>
           </div>
           <div id="am-tags-wrap" style="display:none;">
             <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Programadas</div>
@@ -792,22 +837,47 @@
               <input type="number" class="form-input" id="qt-freq" value="3" min="1">
             </div>
             <div>
-              <label class="form-label">Objetivo</label>
+              <label class="form-label">O que fazer entre aportes</label>
               <select class="form-select" id="qt-modo">
-                <option value="prazo">Reduzir prazo</option>
-                <option value="parcela">Reduzir parcela</option>
+                <option value="prazo">Manter parcela — quitar mais rápido</option>
+                <option value="parcela">Reduzir parcela — prazo igual, mensalidade menor</option>
               </select>
+              <div id="qt-modo-hint" style="font-size:11px;color:var(--muted);margin-top:6px;line-height:1.5;"></div>
             </div>
           </div>
           <button class="btn-primary" style="width:auto;padding:11px 24px;font-size:13px;margin-bottom:16px;" onclick="calcQuitar()">Calcular valor necessário →</button>
           <div id="qt-result" style="display:none;">
-            <div style="background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.25);border-radius:12px;padding:20px;">
+            <!-- Valor do aporte -->
+            <div style="background:rgba(61,117,78,0.08);border:1px solid rgba(61,117,78,0.35);border-radius:12px;padding:20px;margin-bottom:16px;">
               <div style="font-size:12px;color:var(--muted);margin-bottom:6px;">Valor por aporte para quitar no prazo</div>
-              <div style="font-family:'Playfair Display',serif;font-size:36px;color:var(--accent);margin-bottom:8px;" id="qt-valor-aporte">–</div>
-              <div style="font-size:13px;color:var(--muted);" id="qt-descricao">–</div>
-              <button onclick="usarQuitacao()" style="margin-top:14px;padding:9px 18px;background:rgba(201,169,110,0.15);border:1px solid rgba(201,169,110,0.3);border-radius:8px;color:var(--accent);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;cursor:pointer;">
-                Usar esses aportes na simulação →
+              <div style="font-family:'Montserrat',sans-serif;font-size:36px;color:var(--accent);margin-bottom:8px;" id="qt-valor-aporte">–</div>
+              <div style="font-size:13px;line-height:1.6;" id="qt-descricao">–</div>
+              <button onclick="usarQuitacao()" style="margin-top:14px;padding:9px 18px;background:rgba(61,117,78,0.15);border:1px solid rgba(61,117,78,0.4);border-radius:8px;color:var(--accent);font-family:'Ubuntu',sans-serif;font-size:12px;font-weight:600;cursor:pointer;">
+                Aplicar aportes na simulação →
               </button>
+            </div>
+
+            <!-- Comparativo: seguir vs quitar -->
+            <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Seguir até o vencimento vs Quitar antecipado</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;" id="qt-compare-cards"></div>
+
+            <!-- Tabela de evolução da parcela (modo reduzir parcela) -->
+            <div id="qt-parcela-evol" style="display:none;">
+              <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Como a parcela vai caindo mês a mês</div>
+              <div style="overflow-x:auto;max-height:260px;overflow-y:auto;border-radius:10px;border:1px solid var(--border);">
+                <table style="width:100%;border-collapse:collapse;font-size:12px;">
+                  <thead>
+                    <tr>
+                      <th style="padding:9px 12px;background:var(--surface2);color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;text-align:center;font-weight:500;position:sticky;top:0;">Mês</th>
+                      <th style="padding:9px 12px;background:var(--surface2);color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500;position:sticky;top:0;">Parcela</th>
+                      <th style="padding:9px 12px;background:var(--surface2);color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500;position:sticky;top:0;">Juros</th>
+                      <th style="padding:9px 12px;background:var(--surface2);color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500;position:sticky;top:0;">Aporte extra</th>
+                      <th style="padding:9px 12px;background:var(--surface2);color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500;position:sticky;top:0;">Saldo devedor</th>
+                    </tr>
+                  </thead>
+                  <tbody id="qt-parcela-tbody"></tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -818,18 +888,18 @@
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
             <div style="background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;">
               <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Sem amortização</div>
-              <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--text)" id="am-orig-juros">–</div>
+              <div style="font-family:'Montserrat',sans-serif;font-size:22px;color:var(--text)" id="am-orig-juros">–</div>
               <div style="font-size:12px;color:var(--muted);margin-top:4px" id="am-orig-prazo">–</div>
             </div>
             <div style="background:rgba(74,222,128,0.05);border:1px solid rgba(74,222,128,0.2);border-radius:12px;padding:18px;text-align:center;">
               <div style="font-size:11px;color:var(--success);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Com amortização</div>
-              <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--success)" id="am-novo-juros">–</div>
+              <div style="font-family:'Montserrat',sans-serif;font-size:22px;color:var(--success)" id="am-novo-juros">–</div>
               <div style="font-size:12px;color:var(--muted);margin-top:4px" id="am-novo-prazo">–</div>
             </div>
           </div>
-          <div style="background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.2);border-radius:12px;padding:14px;text-align:center;">
+          <div style="background:rgba(61,117,78,0.08);border:1px solid rgba(61,117,78,0.3);border-radius:12px;padding:14px;text-align:center;">
             <div style="font-size:12px;color:var(--muted);margin-bottom:4px;">Economia total em juros</div>
-            <div style="font-family:'Playfair Display',serif;font-size:30px;color:var(--accent)" id="am-economia">–</div>
+            <div style="font-family:'Montserrat',sans-serif;font-size:30px;color:var(--accent)" id="am-economia">–</div>
           </div>
         </div>
       </div>
@@ -862,11 +932,16 @@
       <!-- CUSTO DE OPORTUNIDADE -->
       <div class="sim-panel" id="oc-panel">
         <h2><span>📊</span> Custo de Oportunidade</h2>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:22px;">Compare o custo real do crédito contra deixar o capital investido. O custo efetivo líquido é o que importa.</p>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">
+          Quanto renderia o capital que você <em>não</em> desembolsou à vista? Calculado automaticamente sobre o valor financiado, com as amortizações que você configurou.
+        </p>
+
+        <!-- Leitura automática do cenário -->
+        <div id="oc-auto-info" style="display:none;padding:12px 16px;background:rgba(61,117,78,0.08);border:1px solid rgba(61,117,78,0.25);border-radius:10px;margin-bottom:20px;font-size:13px;color:var(--text);line-height:1.7;"></div>
 
         <!-- Fonte Focus -->
-        <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(201,169,110,0.06);border:1px solid rgba(201,169,110,0.2);border-radius:8px;margin-bottom:20px;font-size:12px;">
-          <span style="font-size:16px;">📋</span>
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:8px;margin-bottom:20px;font-size:12px;">
+          <span style="font-size:15px;">📋</span>
           <div>
             <span style="color:var(--accent);font-weight:600;">Focus BCB · 27/03/2026</span>
             <span style="color:var(--muted);margin-left:8px;">Selic atual 14,50% a.a. · Projeções: 2026: 12,50% · 2027: 10,50% · 2028: 10,00% · 2029: 9,75%</span>
@@ -874,10 +949,6 @@
         </div>
 
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:20px;">
-          <div>
-            <label class="form-label">Capital disponível (R$)</label>
-            <input type="number" class="form-input" id="oc-capital" value="160000" step="5000" min="0">
-          </div>
           <div>
             <label class="form-label">Rendimento do investimento</label>
             <select class="form-select" id="oc-benchmark" onchange="ocUpdateTaxa()">
@@ -902,11 +973,6 @@
               <option value="0">Isento (LCA/LCI · 85% CDI)</option>
             </select>
           </div>
-          <div>
-            <label class="form-label">Capital pago à vista (R$)</label>
-            <input type="number" class="form-input" id="oc-avista" value="0" step="5000" min="0"
-              placeholder="0 = tudo financiado">
-          </div>
         </div>
 
         <button class="btn-primary" style="width:auto;padding:11px 24px;font-size:13px;margin-bottom:24px;" onclick="calcOportunidade()">
@@ -918,16 +984,21 @@
           <!-- Cards principais -->
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;" id="oc-cards"></div>
 
-          <!-- Tabela de cenários -->
-          <div style="margin-bottom:20px;">
-            <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Comparativo de cenários</div>
+          <!-- Comparativo de cenários -->
+          <div style="margin-bottom:24px;">
+            <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Comparativo de cenários</div>
+            <div style="font-size:12px;color:var(--muted);margin-bottom:10px;">
+              <strong style="color:var(--text)">À vista:</strong> você desembolsa o valor total agora — esse capital para de render.
+              O custo é o rendimento que você <em>deixa de ter</em>. &nbsp;·&nbsp;
+              <strong style="color:var(--accent)">Financiado:</strong> o capital fica investido rendendo. O custo líquido é o que você paga de juros <em>menos</em> o que ganhou de rendimento.
+            </div>
             <div style="overflow-x:auto;border-radius:10px;border:1px solid var(--border);">
               <table style="width:100%;border-collapse:collapse;font-size:13px;">
                 <thead>
                   <tr>
                     <th style="padding:11px 14px;background:var(--surface2);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;text-align:left;font-weight:500;">Cenário</th>
                     <th style="padding:11px 14px;background:var(--surface2);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500;">Juros pagos</th>
-                    <th style="padding:11px 14px;background:var(--surface2);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500;">Rendimento gerado</th>
+                    <th style="padding:11px 14px;background:var(--surface2);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500;">Rendimento do capital</th>
                     <th style="padding:11px 14px;background:var(--surface2);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500;">Custo efetivo líquido</th>
                     <th style="padding:11px 14px;background:var(--surface2);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500;">Veredicto</th>
                   </tr>
@@ -937,12 +1008,102 @@
             </div>
           </div>
 
+          <!-- Gráfico: capital investido vs pagamentos acumulados -->
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:24px;">
+            <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px;">Capital investido vs Pagamentos</div>
+            <div style="font-size:12px;color:var(--muted);margin-bottom:18px;">Saldo do capital rendendo (após saídas) × total pago ao crédito mês a mês</div>
+            <canvas id="oc-chart" style="width:100%;max-height:280px;"></canvas>
+            <div style="display:flex;gap:24px;margin-top:14px;flex-wrap:wrap;" id="oc-chart-legend"></div>
+          </div>
+
+          <!-- Tabela de evolução mês a mês -->
+          <div style="margin-bottom:24px;">
+            <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Evolução mês a mês</div>
+            <div style="overflow-x:auto;max-height:340px;overflow-y:auto;border-radius:10px;border:1px solid var(--border);">
+              <table style="width:100%;border-collapse:collapse;font-size:12px;">
+                <thead>
+                  <tr style="position:sticky;top:0;z-index:1;">
+                    <th style="padding:10px 12px;background:var(--surface2);color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;text-align:center;font-weight:500;">Mês</th>
+                    <th style="padding:10px 12px;background:var(--surface2);color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500;">Parcela crédito</th>
+                    <th style="padding:10px 12px;background:var(--surface2);color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500;">Aporte extra</th>
+                    <th style="padding:10px 12px;background:var(--surface2);color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500;">Saldo devedor</th>
+                    <th style="padding:10px 12px;background:var(--surface2);color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500;">Capital investido</th>
+                    <th style="padding:10px 12px;background:var(--surface2);color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500;">Rendimento mês</th>
+                    <th style="padding:10px 12px;background:var(--surface2);color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500;">Saldo total pago</th>
+                  </tr>
+                </thead>
+                <tbody id="oc-evol-body"></tbody>
+                <tfoot id="oc-evol-foot"></tfoot>
+              </table>
+            </div>
+          </div>
+
           <!-- Insight -->
           <div id="oc-insight" style="padding:16px 20px;border-radius:12px;font-size:13px;line-height:1.7;"></div>
         </div>
       </div>
 
+      <!-- SALVAR CENÁRIO -->
+      <div style="display:flex;align-items:center;gap:12px;padding:16px 0;">
+        <input type="text" id="save-nome" class="form-input" placeholder="Nome do cenário (ex: Carro – garantia + CDC)" style="max-width:340px;">
+        <button class="btn-primary" style="width:auto;padding:11px 22px;font-size:13px;" onclick="salvarCenario()">
+          ⊟ Salvar cenário
+        </button>
+        <button onclick="exportarPDF()" style="padding:11px 20px;background:transparent;border:1px solid rgba(61,117,78,0.5);border-radius:10px;color:#3D754E;font-family:'Ubuntu',sans-serif;font-size:13px;font-weight:600;cursor:pointer;">
+          ↓ Exportar PDF
+        </button>
+        <span id="save-feedback" style="font-size:12px;color:var(--success);display:none;">✓ Salvo!</span>
+      </div>
+
     </div><!-- /sim-result -->
+  </div>
+</div>
+
+<!-- ==================== CENÁRIOS SALVOS ==================== -->
+<div class="page" id="page-saved">
+  <div class="page-header">
+    <h1>Cenários Salvos</h1>
+    <p>Compare cenários criados no simulador lado a lado</p>
+  </div>
+  <div class="content">
+    <!-- Banner do banker atual -->
+    <div id="saved-banker-banner" style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:rgba(61,117,78,0.08);border:1px solid rgba(61,117,78,0.2);border-radius:12px;margin-bottom:20px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div style="width:36px;height:36px;border-radius:50%;background:#3D754E;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:white;" id="saved-banker-avatar">?</div>
+        <div>
+          <div style="font-size:14px;font-weight:600;color:var(--text)" id="saved-banker-nome">–</div>
+          <div style="font-size:11px;color:var(--muted)" id="saved-banker-count">0 cenários</div>
+        </div>
+      </div>
+      <button onclick="trocarBanker()" style="padding:8px 14px;background:transparent;border:1px solid var(--border);border-radius:8px;color:var(--muted);font-family:'Ubuntu',sans-serif;font-size:12px;cursor:pointer;">
+        Trocar perfil
+      </button>
+    </div>
+    <div id="saved-empty" style="text-align:center;padding:60px 0;color:var(--muted);">
+      <div style="font-size:48px;margin-bottom:16px;opacity:0.3;">⊟</div>
+      <p>Nenhum cenário salvo ainda.<br>Simule um cenário e clique em "Salvar cenário".</p>
+    </div>
+
+    <!-- Comparativo quando há cenários -->
+    <div id="saved-content" style="display:none;">
+      <div style="display:flex;gap:12px;margin-bottom:24px;align-items:center;flex-wrap:wrap;">
+        <button onclick="limparCenarios()" style="padding:10px 16px;background:transparent;border:1px solid var(--border);border-radius:10px;color:var(--muted);font-family:'Ubuntu',sans-serif;font-size:13px;cursor:pointer;">
+          Limpar todos
+        </button>
+        <span style="font-size:12px;color:var(--muted)" id="saved-count"></span>
+      </div>
+
+      <!-- Cards dos cenários salvos -->
+      <div id="saved-cards" style="display:grid;gap:20px;margin-bottom:32px;"></div>
+
+      <!-- Tabela comparativa -->
+      <div id="saved-compare" style="display:none;">
+        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;">Comparativo</div>
+        <div style="overflow-x:auto;border-radius:12px;border:1px solid var(--border);">
+          <table style="width:100%;border-collapse:collapse;font-size:13px;" id="saved-table"></table>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -981,7 +1142,7 @@
       <div class="compare-grid" style="grid-template-columns: 160px repeat(7, 1fr);">
         <!-- Headers -->
         <div class="compare-header label-col">Critério</div>
-        <div class="compare-header"><span class="product-dot" style="background:#c9a96e"></span>Clean</div>
+        <div class="compare-header"><span class="product-dot" style="background:#3D754E"></span>Clean</div>
         <div class="compare-header"><span class="product-dot" style="background:#7b68ee"></span>c/ Garantia</div>
         <div class="compare-header"><span class="product-dot" style="background:#a78bfa"></span>Garantia Bullet</div>
         <div class="compare-header"><span class="product-dot" style="background:#34d399"></span>Home Equity</div>
@@ -1118,6 +1279,27 @@
     <p>Tire dúvidas, analise cenários e obtenha recomendações personalizadas</p>
   </div>
   <div class="content" style="padding-top:24px;">
+
+    <!-- API KEY SETUP -->
+    <div id="chat-apikey-panel" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+        <span style="font-size:20px;">🔑</span>
+        <div>
+          <div style="font-size:14px;font-weight:600;color:var(--text)">Chave de API Anthropic</div>
+          <div style="font-size:12px;color:var(--muted);">Necessária para o assistente funcionar. Fica salva localmente no seu browser — não é enviada para nenhum servidor.</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+        <input type="password" id="chat-apikey-input" class="form-input" placeholder="sk-ant-api03-..." style="max-width:380px;font-family:'Courier New',monospace;font-size:13px;">
+        <button class="btn-primary" style="width:auto;padding:11px 20px;font-size:13px;" onclick="salvarApiKey()">Salvar chave</button>
+        <button id="chat-apikey-clear" onclick="limparApiKey()" style="display:none;padding:11px 16px;background:transparent;border:1px solid var(--border);border-radius:10px;color:var(--muted);font-family:'Ubuntu',sans-serif;font-size:13px;cursor:pointer;">Remover</button>
+        <span id="chat-apikey-status" style="font-size:12px;"></span>
+      </div>
+      <div style="font-size:11px;color:var(--muted);margin-top:10px;line-height:1.6;">
+        Obtenha sua chave em <a href="https://console.anthropic.com" target="_blank" style="color:var(--accent)">console.anthropic.com</a> · Custo estimado: ~$0,003 por mensagem (Claude Sonnet) · Cada conversa usa no máximo as últimas 6 trocas de mensagens para controlar o custo.
+      </div>
+    </div>
+
     <div class="chat-layout">
       <div class="chat-main">
         <div class="chat-header">
@@ -1126,20 +1308,20 @@
             <h3>Credit Specialist</h3>
             <p>Especialista RTS em crédito pessoa física</p>
           </div>
-          <div class="status-dot"></div>
+          <div id="chat-status-dot" class="status-dot" style="background:var(--muted);box-shadow:none;"></div>
         </div>
         <div class="chat-messages" id="chat-messages">
           <div class="msg ai animate-in">
             <div class="msg-avatar">🏦</div>
             <div class="msg-bubble">
-              Olá! Sou o especialista de crédito da RTS Partners. Posso ajudar com análise de produtos, simulação de cenários, comparação de modalidades e recomendações para o perfil do seu cliente.<br><br>
-              Como posso ajudar hoje?
+              Olá! Sou o especialista de crédito da RTS Partners. Configure sua chave de API acima para começar.<br><br>
+              Posso ajudar com análise de produtos, simulação de cenários, comparação de modalidades e recomendações para o perfil do seu cliente.
             </div>
           </div>
         </div>
         <div class="chat-input-area">
-          <textarea class="chat-input" id="chat-input" placeholder="Ex: Qual produto é melhor para quem tem imóvel quitado e precisa de R$500k?" onkeydown="chatKeyDown(event)"></textarea>
-          <button class="chat-send" id="chat-send-btn" onclick="sendChat()">↑</button>
+          <textarea class="chat-input" id="chat-input" placeholder="Configure a chave de API para enviar mensagens..." onkeydown="chatKeyDown(event)" disabled></textarea>
+          <button class="chat-send" id="chat-send-btn" onclick="sendChat()" disabled>↑</button>
         </div>
       </div>
       <div class="chat-sidebar">
@@ -1174,6 +1356,7 @@ function goTo(page) {
   event.currentTarget.classList.add('active');
   if(page === 'kb') renderKB('clean');
   if(page === 'simulator') initSimulator();
+  if(page === 'saved') renderCenariosSalvos();
 }
 
 // ==================== KNOWLEDGE BASE DATA ====================
@@ -1379,7 +1562,7 @@ const SIM_PRODUCTS = [
   { id: 'veiculo',         label: '🚗 Fin. Veículo',            taxa: 1.49, maxPrazo: 60,  bullet: false, fullbullet: false },
   { id: 'consorcio',       label: '🔄 Consórcio',               taxa: 0.18, maxPrazo: 200, bullet: false, fullbullet: false },
 ];
-const SIM_COLORS = ['#c9a96e','#7b68ee','#34d399','#60a5fa','#f472b6','#fb923c','#a78bfa'];
+const SIM_COLORS = ['#3D754E','#7b68ee','#34d399','#60a5fa','#f472b6','#fb923c','#a78bfa'];
 
 let simTranches = [];
 let simTrancheCount = 0;
@@ -1387,6 +1570,25 @@ let simResults = [];
 let simAmorts = []; // [{trancheIdx, valor, tipo, mes, freq, inicio, modo}]
 
 // ---- TRANCHE UI ----
+// ── Taxa mensal ↔ anual sync ─────────────────────────────────────────────
+function syncTaxaAnual(tid) {
+  const mensal = parseFloat(document.getElementById(tid+'-taxa').value);
+  if (!isNaN(mensal) && mensal > 0) {
+    const anual = (Math.pow(1 + mensal/100, 12) - 1) * 100;
+    const el = document.getElementById(tid+'-taxa-anual');
+    if (el) el.value = anual.toFixed(2);
+  }
+}
+
+function syncTaxaMensal(tid) {
+  const anual = parseFloat(document.getElementById(tid+'-taxa-anual').value);
+  if (!isNaN(anual) && anual > 0) {
+    const mensal = (Math.pow(1 + anual/100, 1/12) - 1) * 100;
+    const el = document.getElementById(tid+'-taxa');
+    if (el) el.value = mensal.toFixed(4);
+  }
+}
+
 function simAddTranche() {
   if (simTrancheCount >= 3) return;
   simTrancheCount++;
@@ -1415,8 +1617,14 @@ function simAddTranche() {
         <input type="number" class="form-input" id="${tid}-valor" value="200000" step="5000" min="1000">
       </div>
       <div>
-        <label class="form-label">Taxa (%a.m.)</label>
-        <input type="number" class="form-input" id="${tid}-taxa" value="1.49" step="0.05" min="0.1">
+        <label class="form-label">Taxa mensal (%a.m.)</label>
+        <input type="number" class="form-input" id="${tid}-taxa" value="1.49" step="0.01" min="0.01"
+          oninput="syncTaxaAnual('${tid}')">
+      </div>
+      <div>
+        <label class="form-label">Taxa anual (%a.a.)</label>
+        <input type="number" class="form-input" id="${tid}-taxa-anual" value="19.39" step="0.1" min="0.1"
+          oninput="syncTaxaMensal('${tid}')">
       </div>
       <div>
         <label class="form-label">Prazo (meses)</label>
@@ -1431,10 +1639,6 @@ function simAddTranche() {
           <option value="sac">SAC (amortização constante)</option>
         </select>
       </div>
-      <div>
-        <label class="form-label">Renda bruta mensal (R$)</label>
-        <input type="number" class="form-input" id="${tid}-renda" value="30000" step="1000">
-      </div>
     </div>
   `;
   document.getElementById('sim-tranches').appendChild(el);
@@ -1442,7 +1646,9 @@ function simAddTranche() {
   // Set default product to veiculo for first tranche
   if (simTrancheCount === 1) {
     document.getElementById(tid+'-prod').value = 'veiculo';
-    simOnProductChange(tid);
+    simOnProductChange(tid); // also syncs taxa anual
+  } else {
+    syncTaxaAnual(tid); // sync initial default value
   }
 }
 
@@ -1451,6 +1657,7 @@ function simOnProductChange(tid) {
   const p = SIM_PRODUCTS.find(x=>x.id===prod);
   if (!p) return;
   document.getElementById(tid+'-taxa').value = p.taxa;
+  syncTaxaAnual(tid); // sync anual field
   document.getElementById(tid+'-prazo').max = p.maxPrazo;
   const sg = document.getElementById(tid+'-sistema-group');
   if (sg) sg.style.display = p.bullet ? 'none' : 'block';
@@ -1549,7 +1756,7 @@ function simCalcular() {
     const taxa = parseFloat(document.getElementById(tid+'-taxa').value)/100;
     const prazo = parseInt(document.getElementById(tid+'-prazo').value)||12;
     const sistema = document.getElementById(tid+'-sistema')?.value || 'price';
-    const renda = parseFloat(document.getElementById(tid+'-renda')?.value)||30000;
+    const renda = 0; // removed
     const p = SIM_PRODUCTS.find(x=>x.id===prod);
     const isFullBullet = p?.fullbullet||false;
     const color = SIM_COLORS[i];
@@ -1557,7 +1764,7 @@ function simCalcular() {
     const calc = calcTrancheFluxo(valor, prazo, taxa, sistema, isFullBullet);
     const comprometimento = (calc.parcela/renda)*100;
 
-    simResults.push({ tid, prod, label: p?.label||prod, valor, taxa, prazo, sistema, isFullBullet, color, renda, comprometimento, ...calc });
+    simResults.push({ tid, prod, label: p?.label||prod, valor, taxa, prazo, sistema, isFullBullet, color, ...calc });
     totalValor += valor;
     totalParcela += calc.parcela;
     totalJuros += calc.totalJuros;
@@ -1573,27 +1780,81 @@ function simCalcular() {
   `;
 
   // BREAKDOWN
+  // CDI mensal médio (Focus, 15 aliq IR padrão) para alerta de custo líquido
+  const cdiMensalRef = buildTaxaMensal(maxPrazo, 1.0).reduce((a,b)=>a+b,0) / Math.max(maxPrazo,1);
+  const cdiLiqRef = cdiMensalRef * (1 - 0.15); // líquido de IR 15%
+
   document.getElementById('sim-breakdown').innerHTML = simResults.map(r => {
-    const compColor = r.comprometimento > 35 ? 'var(--danger)' : r.comprometimento > 25 ? '#fbbf24' : 'var(--success)';
+
+    // Custo líquido por tranche: taxa do crédito vs CDI líquido
+    let alertaHtml = '';
+    if (!r.isFullBullet) {
+      const custoLiq = r.taxa - cdiLiqRef; // mensal
+      const custoLiqAnual = (Math.pow(1 + Math.abs(custoLiq), 12) - 1) * 100;
+      const sinal = custoLiq > 0 ? '+' : '−';
+      const cor = custoLiq > 0 ? 'var(--danger)' : 'var(--success)';
+      const isGarantia = r.prod === 'garantia' || r.prod === 'garantia-bullet';
+
+      if (custoLiq <= 0) {
+        // Crédito mais barato que CDI — compensa manter capital investido
+        alertaHtml = `
+          <div style="grid-column:1/-1;display:flex;align-items:flex-start;gap:10px;padding:12px 14px;background:rgba(74,222,128,0.06);border:1px solid rgba(74,222,128,0.18);border-radius:8px;margin-top:4px;">
+            <span style="font-size:15px;flex-shrink:0">✓</span>
+            <div style="font-size:12px;line-height:1.6;color:#c4c2d0;">
+              <strong style="color:var(--success)">Crédito compensa vs pagar à vista.</strong>
+              Taxa do crédito (${(r.taxa*100).toFixed(2)}% a.m.) é menor que o CDI líquido (~${(cdiLiqRef*100).toFixed(2)}% a.m.).
+              Custo líquido: <span style="color:var(--success);font-family:'Courier New',monospace;">${sinal}${custoLiqAnual.toFixed(1)}% a.a.</span>
+              ${isGarantia ? '— mesmo com o ativo bloqueado, o rendimento supera o custo do crédito.' : ''}
+              <strong>Recomendação: mantenha o capital investido.</strong>
+            </div>
+          </div>`;
+      } else if (custoLiq <= 0.003) {
+        // Spread pequeno (até ~0,3% a.m.) — zona de equilíbrio
+        alertaHtml = `
+          <div style="grid-column:1/-1;display:flex;align-items:flex-start;gap:10px;padding:12px 14px;background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.2);border-radius:8px;margin-top:4px;">
+            <span style="font-size:15px;flex-shrink:0">⚖</span>
+            <div style="font-size:12px;line-height:1.6;color:#c4c2d0;">
+              <strong style="color:#fbbf24">Custo próximo ao CDI.</strong>
+              Spread líquido de <span style="font-family:'Courier New',monospace;color:#fbbf24">${sinal}${custoLiqAnual.toFixed(1)}% a.a.</span>
+              ${isGarantia ? 'O ativo fica bloqueado como garantia mas o custo real é baixo. ' : ''}
+              Avalie se a liquidez preservada justifica esse prêmio. Se não precisar do capital no curto prazo, o crédito ainda pode fazer sentido pela opcionalidade de resgate antecipado.
+            </div>
+          </div>`;
+      } else {
+        // Crédito mais caro que CDI — usar capital para reduzir principal
+        alertaHtml = `
+          <div style="grid-column:1/-1;display:flex;align-items:flex-start;gap:10px;padding:12px 14px;background:rgba(248,113,113,0.06);border:1px solid rgba(248,113,113,0.18);border-radius:8px;margin-top:4px;">
+            <span style="font-size:15px;flex-shrink:0">⚠</span>
+            <div style="font-size:12px;line-height:1.6;color:#c4c2d0;">
+              <strong style="color:var(--danger)">Crédito mais caro que o rendimento.</strong>
+              Spread líquido de <span style="font-family:'Courier New',monospace;color:var(--danger)">${sinal}${custoLiqAnual.toFixed(1)}% a.a.</span> acima do CDI líquido.
+              ${isGarantia
+                ? 'Usar o ativo como garantia gera custo a mais sem benefício real — o capital fica bloqueado <em>e</em> o crédito é mais caro que o rendimento. <strong>Recomendação: use o capital para abater o principal em vez de dar como garantia.</strong>'
+                : '<strong>Recomendação: use capital disponível para reduzir o principal financiado. Cada real amortizado antecipadamente economiza esse spread.</strong>'}
+            </div>
+          </div>`;
+      }
+    }
+
     return `
-    <div style="background:var(--surface);border:1px solid var(--border);border-left:3px solid ${r.color};border-radius:12px;padding:20px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr;gap:10px;align-items:center;">
+    <div style="background:var(--surface);border:1px solid var(--border);border-left:3px solid ${r.color};border-radius:12px;padding:20px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:10px;align-items:center;">
       <div>
         <div style="font-size:13px;font-weight:600;color:${r.color}">${r.label}</div>
         <div style="font-size:11px;color:var(--muted);margin-top:2px;">${r.isFullBullet?'Bullet Total':r.sistema.toUpperCase()} · ${r.prazo}m · ${(r.taxa*100).toFixed(2)}% a.m.</div>
       </div>
-      <div style="text-align:right"><div style="font-size:10px;color:var(--muted);mb:2px">Principal</div><div style="font-family:'DM Mono',monospace;font-size:12px">${fmt(r.valor)}</div></div>
-      <div style="text-align:right"><div style="font-size:10px;color:var(--muted)">Parcela</div><div style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent)">${r.isFullBullet?'R$ 0,00':fmt(r.parcela)}</div></div>
-      <div style="text-align:right"><div style="font-size:10px;color:var(--muted)">Juros</div><div style="font-family:'DM Mono',monospace;font-size:12px;color:var(--danger)">${fmt(r.totalJuros)}</div></div>
-      <div style="text-align:right"><div style="font-size:10px;color:var(--muted)">${r.isFullBullet?'Pagamento único':'Custo total'}</div><div style="font-family:'DM Mono',monospace;font-size:12px">${r.isFullBullet?fmt(r.montante):fmt(r.valor+r.totalJuros)}</div></div>
-      <div style="text-align:right"><div style="font-size:10px;color:var(--muted)">Renda</div><div style="font-family:'DM Mono',monospace;font-size:12px;color:${compColor}">${r.isFullBullet?'0%':r.comprometimento.toFixed(1)+'%'}</div></div>
+      <div style="text-align:right"><div style="font-size:10px;color:var(--muted)">Principal</div><div style="font-family:'Courier New',monospace;font-size:12px">${fmt(r.valor)}</div></div>
+      <div style="text-align:right"><div style="font-size:10px;color:var(--muted)">Parcela</div><div style="font-family:'Courier New',monospace;font-size:12px;color:var(--accent)">${r.isFullBullet?'R$ 0,00':fmt(r.parcela)}</div></div>
+      <div style="text-align:right"><div style="font-size:10px;color:var(--muted)">Juros</div><div style="font-family:'Courier New',monospace;font-size:12px;color:var(--danger)">${fmt(r.totalJuros)}</div></div>
+      <div style="text-align:right"><div style="font-size:10px;color:var(--muted)">${r.isFullBullet?'Pagamento único':'Custo total'}</div><div style="font-family:'Courier New',monospace;font-size:12px">${r.isFullBullet?fmt(r.montante):fmt(r.valor+r.totalJuros)}</div></div>
+      ${alertaHtml}
     </div>`;
   }).join('');
 
   // COMPARATIVO TABLE — só este cenário (benchmarks removidos por não serem fidedignos)
-  const comboRow = `<tr style="background:rgba(201,169,110,0.07);">
+  const comboRow = `<tr style="background:rgba(61,117,78,0.07);">
     <td style="padding:13px 16px;border-bottom:1px solid var(--border);font-weight:600;color:var(--accent)">⊕ Este Cenário</td>
     <td style="padding:13px 16px;border-bottom:1px solid var(--border);text-align:right;font-family:'DM Mono',monospace">${fmt(totalParcela)}</td>
-    <td style="padding:13px 16px;border-bottom:1px solid var(--border);text-align:right;font-family:'DM Mono',monospace;color:var(--danger)">${fmt(totalJuros)}</td>
+    <td style="padding:13px 16px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;color:var(--danger)">${fmt(totalJuros)}</td>
     <td style="padding:13px 16px;border-bottom:1px solid var(--border);text-align:right;font-family:'DM Mono',monospace">${fmt(totalValor+totalJuros)}</td>
     <td style="padding:13px 16px;border-bottom:1px solid var(--border);text-align:right;color:var(--muted)">${maxPrazo}m</td>
   </tr>`;
@@ -1675,7 +1936,7 @@ function amRenderTags() {
     const r = simResults[a.trancheIdx];
     const tLabel = r?.label.replace(/^[^\s]+\s/,'').substring(0,16)||'';
     const desc = a.tipo==='pontual' ? `Mês ${a.mes}` : `A cada ${a.freq}m (início ${a.inicio})`;
-    return `<span style="display:inline-flex;align-items:center;gap:8px;padding:6px 12px;background:rgba(201,169,110,0.1);border:1px solid rgba(201,169,110,0.2);border-radius:20px;font-size:12px;color:var(--accent);">
+    return `<span style="display:inline-flex;align-items:center;gap:8px;padding:6px 12px;background:rgba(61,117,78,0.12);border:1px solid rgba(61,117,78,0.3);border-radius:20px;font-size:12px;color:var(--accent);">
       ${tLabel} · ${fmt(a.valor)} · ${desc} · ${a.modo==='prazo'?'↓ prazo':'↓ parcela'}
       <span onclick="amRemover(${i})" style="cursor:pointer;color:var(--muted);font-size:15px;line-height:1">×</span>
     </span>`;
@@ -1733,48 +1994,129 @@ function amRecalc() {
 let lastQtResult = null;
 
 function calcQuitar() {
-  const idx   = parseInt(document.getElementById('qt-tranche').value);
-  const r     = simResults[idx];
+  const idx       = parseInt(document.getElementById('qt-tranche').value);
+  const r         = simResults[idx];
   if (!r || r.isFullBullet) { alert('Não aplicável a Bullet Total.'); return; }
 
-  const prazoAlvo = parseInt(document.getElementById('qt-prazo').value)||12;
-  const freq      = parseInt(document.getElementById('qt-freq').value)||3;
+  const prazoAlvo = parseInt(document.getElementById('qt-prazo').value) || 12;
+  const freq      = parseInt(document.getElementById('qt-freq').value) || 3;
   const modo      = document.getElementById('qt-modo').value;
 
-  // How many aportes fit in prazoAlvo at given freq?
   const numAportes = Math.floor(prazoAlvo / freq);
   if (numAportes < 1) { alert('Frequência maior que prazo alvo.'); return; }
 
-  // Binary search: find X such that calcTrancheFluxo with aportes of X every freq months
-  // terminates at or before prazoAlvo
+  // Binary search para valor do aporte
   let lo = 0, hi = r.valor * 2, best = null;
   for (let iter = 0; iter < 60; iter++) {
     const mid = (lo + hi) / 2;
     const amortList = [];
     for (let m = freq; m <= r.prazo; m += freq) amortList.push({mes:m, valor:mid, modo});
-    const resultado = calcTrancheFluxo(r.valor, r.prazo, r.taxa, r.sistema, false, amortList);
-    if (resultado.prazoEfetivo <= prazoAlvo) {
-      best = mid;
-      hi = mid;
-    } else {
-      lo = mid;
-    }
+    const res = calcTrancheFluxo(r.valor, r.prazo, r.taxa, r.sistema, false, amortList);
+    if (res.prazoEfetivo <= prazoAlvo) { best = mid; hi = mid; }
+    else lo = mid;
     if (hi - lo < 1) break;
   }
-
   if (!best) { alert('Não foi possível calcular. Verifique os parâmetros.'); return; }
-  best = Math.ceil(best / 10) * 10; // round up to nearest R$10
+  best = Math.ceil(best / 10) * 10;
 
-  // Confirm with rounded value
+  // Fluxo COM aportes
   const amortList = [];
   for (let m = freq; m <= r.prazo; m += freq) amortList.push({mes:m, valor:best, modo});
-  const confirmado = calcTrancheFluxo(r.valor, r.prazo, r.taxa, r.sistema, false, amortList);
+  const comAmort = calcTrancheFluxo(r.valor, r.prazo, r.taxa, r.sistema, false, amortList);
 
-  lastQtResult = { trancheIdx: idx, valor: best, freq, modo, prazoAlvo, prazoEfetivo: confirmado.prazoEfetivo };
+  // Fluxo SEM aportes (original)
+  const semAmort = calcTrancheFluxo(r.valor, r.prazo, r.taxa, r.sistema, false, []);
+
+  const economia     = semAmort.totalJuros - comAmort.totalJuros;
+  const mesesGanhos  = semAmort.prazoEfetivo - comAmort.prazoEfetivo;
+  const totalAportes = best * numAportes;
+
+  lastQtResult = { trancheIdx: idx, valor: best, freq, modo, prazoAlvo, prazoEfetivo: comAmort.prazoEfetivo };
+
+  // Descrição do modo
+  const modoExpl = modo === 'prazo'
+    ? `Parcela mantida em ${fmt(r.parcela)}/mês. O contrato termina ${mesesGanhos} meses antes.`
+    : `Após cada aporte, a parcela é recalculada e vai diminuindo. Veja a tabela abaixo.`;
 
   document.getElementById('qt-valor-aporte').textContent = fmt(best);
-  document.getElementById('qt-descricao').textContent =
-    `${numAportes} aporte(s) de ${fmt(best)} a cada ${freq} meses → quita em ${confirmado.prazoEfetivo} meses (vs ${r.prazo} originais). Economia: ${fmt(r.totalJuros - confirmado.totalJuros)} em juros.`;
+  document.getElementById('qt-descricao').innerHTML =
+    `<strong>${numAportes} aportes</strong> de ${fmt(best)} a cada ${freq} meses →
+     quita no mês <strong>${comAmort.prazoEfetivo}</strong> (vs ${r.prazo} original).<br>
+     <span style="font-size:12px;color:var(--muted)">${modoExpl}</span>`;
+
+  // ── CARDS COMPARATIVOS ────────────────────────────────────────────────────
+  document.getElementById('qt-compare-cards').innerHTML = `
+    <div style="background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:18px;">
+      <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;">Seguir até o vencimento</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;justify-content:space-between;font-size:13px;">
+          <span style="color:var(--muted)">Prazo</span>
+          <span style="font-family:'DM Mono',monospace">${semAmort.prazoEfetivo} meses</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;">
+          <span style="color:var(--muted)">Parcela</span>
+          <span style="font-family:'DM Mono',monospace">${fmt(semAmort.parcela)}/mês</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;">
+          <span style="color:var(--muted)">Total de juros</span>
+          <span style="font-family:'Courier New',monospace;color:var(--danger)">${fmt(semAmort.totalJuros)}</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;">
+          <span style="color:var(--muted)">Custo total</span>
+          <span style="font-family:'DM Mono',monospace">${fmt(r.valor + semAmort.totalJuros)}</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;">
+          <span style="color:var(--muted)">Aportes extras</span>
+          <span style="font-family:'Courier New',monospace;color:var(--muted)">–</span>
+        </div>
+      </div>
+    </div>
+    <div style="background:rgba(74,222,128,0.05);border:1px solid rgba(74,222,128,0.2);border-radius:12px;padding:18px;">
+      <div style="font-size:11px;color:var(--success);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;">Quitar em ${comAmort.prazoEfetivo} meses</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;justify-content:space-between;font-size:13px;">
+          <span style="color:var(--muted)">Prazo</span>
+          <span style="font-family:'Courier New',monospace;color:var(--success)">${comAmort.prazoEfetivo} meses <span style="font-size:11px">(−${mesesGanhos}m)</span></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;">
+          <span style="color:var(--muted)">Parcela</span>
+          <span style="font-family:'DM Mono',monospace">${fmt(comAmort.parcela)}/mês${modo==='parcela'?' (inicial)':''}</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;">
+          <span style="color:var(--muted)">Total de juros</span>
+          <span style="font-family:'Courier New',monospace;color:var(--success)">${fmt(comAmort.totalJuros)} <span style="font-size:11px">(−${fmt(economia)})</span></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;">
+          <span style="color:var(--muted)">Custo total</span>
+          <span style="font-family:'DM Mono',monospace">${fmt(r.valor + comAmort.totalJuros + totalAportes)}</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;">
+          <span style="color:var(--muted)">Aportes extras</span>
+          <span style="font-family:'Courier New',monospace;color:var(--accent)">${numAportes}× ${fmt(best)} = ${fmt(totalAportes)}</span>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // ── TABELA DE EVOLUÇÃO DA PARCELA (só se modo = parcela) ──────────────────
+  const evolEl = document.getElementById('qt-parcela-evol');
+  if (modo === 'parcela') {
+    evolEl.style.display = 'block';
+    document.getElementById('qt-parcela-tbody').innerHTML = comAmort.rows.map(row => {
+      const isAporte = row.amortExtra > 0;
+      const bg = isAporte ? 'background:rgba(61,117,78,0.07)' : '';
+      return `<tr style="${bg}">
+        <td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center;color:${isAporte?'var(--accent)':'var(--muted)'};font-weight:${isAporte?'600':'400'}">${row.mes}${isAporte?' ⚡':''}</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;color:var(--accent)">${fmt(row.parcela)}</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;font-size:11px;color:var(--danger)">${fmt(row.juros)}</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;font-size:11px;color:${isAporte?'var(--accent)':'var(--muted)'}">${isAporte?fmt(row.amortExtra):'–'}</td>
+        <td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;font-size:11px;color:${row.saldo<=0.01?'var(--success)':'var(--text)'}">${row.saldo<=0.01?'Quitado ✓':fmt(row.saldo)}</td>
+      </tr>`;
+    }).join('');
+  } else {
+    evolEl.style.display = 'none';
+  }
+
   document.getElementById('qt-result').style.display = 'block';
 }
 
@@ -1841,7 +2183,7 @@ function simDrawChart(results, maxPrazo, amortRowsPerTranche) {
   });
 
   // Consolidated (gold solid)
-  ctx.beginPath(); ctx.strokeStyle='#c9a96e'; ctx.lineWidth=2.5;
+  ctx.beginPath(); ctx.strokeStyle='#3D754E'; ctx.lineWidth=2.5;
   consolidated.forEach((v,m)=>{ m===0?ctx.moveTo(toX(m),toY(v)):ctx.lineTo(toX(m),toY(v)); });
   ctx.stroke();
   // Fill
@@ -1849,7 +2191,7 @@ function simDrawChart(results, maxPrazo, amortRowsPerTranche) {
   consolidated.forEach((v,m)=>{ m===0?ctx.moveTo(toX(m),toY(v)):ctx.lineTo(toX(m),toY(v)); });
   ctx.lineTo(toX(maxPrazo),toY(0)); ctx.lineTo(toX(0),toY(0)); ctx.closePath();
   const grad=ctx.createLinearGradient(0,padT,0,padT+chartH);
-  grad.addColorStop(0,'rgba(201,169,110,0.15)'); grad.addColorStop(1,'rgba(201,169,110,0)');
+  grad.addColorStop(0,'rgba(61,117,78,0.2)'); grad.addColorStop(1,'rgba(61,117,78,0)');
   ctx.fillStyle=grad; ctx.fill();
 
   // Amortized overlay (green dashed)
@@ -1885,9 +2227,9 @@ function simDrawChart(results, maxPrazo, amortRowsPerTranche) {
     ctx.fillText(r.label.replace(/^[^\s]+\s/,'').substring(0,14), lx+22, H-4);
   });
   const lx2=padL+results.length*150;
-  ctx.strokeStyle='#c9a96e'; ctx.lineWidth=2.5;
+  ctx.strokeStyle='#3D754E'; ctx.lineWidth=2.5;
   ctx.beginPath(); ctx.moveTo(lx2,H-8); ctx.lineTo(lx2+18,H-8); ctx.stroke();
-  ctx.fillStyle='#c9a96e'; ctx.fillText('Consolidado',lx2+22,H-4);
+  ctx.fillStyle='#3D754E'; ctx.fillText('Consolidado',lx2+22,H-4);
   if (amortRowsPerTranche) {
     const lx3=lx2+150;
     ctx.strokeStyle='#4ade80'; ctx.lineWidth=2; ctx.setLineDash([6,3]);
@@ -1966,88 +2308,1341 @@ function ocGetTaxaMedia(prazoMeses) {
 function calcOportunidade() {
   if (!simResults.length) { alert('Calcule um cenário primeiro.'); return; }
 
-  const capitalDisponivel = parseFloat(document.getElementById('oc-capital').value) || 0;
-  const aliqIR            = parseFloat(document.getElementById('oc-ir').value);
-  const capitalAvista     = parseFloat(document.getElementById('oc-avista').value) || 0;
-  const bench             = document.getElementById('oc-benchmark').value;
+  const aliqIR = parseFloat(document.getElementById('oc-ir').value);
+  const bench  = document.getElementById('oc-benchmark').value;
 
+  // ── LÊ DIRETO DO CENÁRIO SIMULADO ─────────────────────────────────────────
   const totalJuros  = simResults.reduce((s,r) => s + r.totalJuros, 0);
-  const totalValor  = simResults.reduce((s,r) => s + r.valor, 0);
+  const totalValor  = simResults.reduce((s,r) => s + r.valor, 0);   // = capital não descapitalizado
   const maxPrazo    = Math.max(...simResults.map(r => r.prazoEfetivo));
-  const capitalInvestido = Math.max(0, capitalDisponivel - capitalAvista);
 
-  const rendInvest  = ocGetRendimento(capitalInvestido, maxPrazo, aliqIR);
-  const custoEfetivoCred = totalJuros - rendInvest.liquido;
+  // Capital que não sai do bolso à vista = o que foi financiado
+  const capitalInvestido = totalValor;
 
-  const totalNecessario = totalValor + capitalAvista;
-  const rendAvista  = ocGetRendimento(totalNecessario, maxPrazo, aliqIR);
-  const custoAvista = rendAvista.liquido;
+  // ── TEM PRÉ-PAGAMENTO CONFIGURADO? ────────────────────────────────────────
+  const temAmorts = simAmorts && simAmorts.length > 0;
 
-  const taxaMedia = ocGetTaxaMedia(maxPrazo);
-  const taxaMediaAnual = (Math.pow(1 + taxaMedia, 12) - 1) * 100;
-  const benchLabel = bench === 'focus_cdi' ? 'CDI projetado Focus' : bench === 'focus_90' ? '90% CDI Focus' : bench === 'focus_lci' ? 'LCI/LCA 85% CDI isento' : bench === 'custom' ? 'Taxa personalizada' : 'CDI fixo atual';
+  // ── RECONSTRÓI OS FLUXOS COM OS APORTES ATUAIS DE simAmorts ──────────────
+  // Recalcula cada tranche com os aportes de simAmorts para garantir
+  // que o custo de oportunidade sempre reflete o cenário corrente.
 
-  const cenariosAlt = [
-    { label: '💰 À vista (sem crédito)', juros: 0, rendimento: rendAvista.liquido, custoLiq: rendAvista.liquido, isAvista: true },
-    { label: '⊕ Este cenário', juros: totalJuros, rendimento: rendInvest.liquido, custoLiq: custoEfetivoCred, isThis: true },
-  ];
+  const saidasPorMes      = {};
+  const parcelasPorMes    = {};
+  const saldoDevedorPorMes = {};
 
-  const fmtSinal = n => (n < 0 ? '− ' : '') + fmt(Math.abs(n));
+  // Monta amort list por tranche a partir de simAmorts
+  function buildAmortListOC(trancheIdx, prazo) {
+    const list = [];
+    (simAmorts||[]).filter(a => a.trancheIdx === trancheIdx).forEach(a => {
+      if (a.tipo === 'pontual') {
+        list.push({ mes: a.mes, valor: a.valor, modo: a.modo });
+      } else {
+        for (let m = a.inicio; m <= prazo; m += a.freq)
+          list.push({ mes: m, valor: a.valor, modo: a.modo });
+      }
+    });
+    return list;
+  }
+
+  // Recalcula cada tranche e consolida fluxo mês a mês
+  const fluxosRecalc = simResults.map((r, i) => {
+    if (r.isFullBullet) return { rows: [], prazoEf: r.prazo, valor: r.valor, montante: r.montante, isBullet: true };
+    const amortList = buildAmortListOC(i, r.prazo);
+    const calc = calcTrancheFluxo(r.valor, r.prazo, r.taxa, r.sistema, false, amortList);
+    return { rows: calc.rows, prazoEf: calc.prazoEfetivo, valor: r.valor, isBullet: false, totalJurosRecalc: calc.totalJuros };
+  });
+
+  // Prazo máximo efetivo com os aportes
+  const maxPrazoRecalc = Math.max(...fluxosRecalc.map(f => f.prazoEf));
+
+  // Total de juros real com aportes
+  const totalJurosRecalc = fluxosRecalc.reduce((s, f) => s + (f.totalJurosRecalc ?? f.valor*(Math.pow(1+simResults[fluxosRecalc.indexOf(f)]?.taxa||0, f.prazoEf)-1)), 0);
+
+  for (let m = 1; m <= maxPrazoRecalc; m++) {
+    let parcelaMes = 0, saldoMes = 0;
+    fluxosRecalc.forEach(f => {
+      if (f.isBullet) {
+        if (m === f.prazoEf) saidasPorMes[m] = (saidasPorMes[m]||0) + f.montante;
+        saldoMes += m < f.prazoEf ? f.valor : 0;
+      } else {
+        const row = f.rows.find(x => x.mes === m);
+        if (row) {
+          parcelaMes += row.parcela;
+          saldoMes   += row.saldo;
+          if (row.amortExtra > 0)
+            saidasPorMes[m] = (saidasPorMes[m]||0) + row.amortExtra;
+        }
+      }
+    });
+    parcelasPorMes[m]     = parcelaMes;
+    saldoDevedorPorMes[m] = saldoMes;
+  }
+
+  // Prazo efetivo real (quando saldo devedor zera)
+  let prazoEfetivoReal = maxPrazoRecalc;
+  for (let m = 1; m <= maxPrazoRecalc; m++) {
+    if ((saldoDevedorPorMes[m]||0) <= 0.01) { prazoEfetivoReal = m; break; }
+  }
+
+  // Taxas mensais Focus — usa o prazo mais longo entre original e efetivo
+  const pct = bench === 'focus_90' ? 0.9 : bench === 'focus_lci' ? 0.85 : 1.0;
+  const taxasMensais = buildTaxaMensal(Math.max(maxPrazo, prazoEfetivoReal), pct);
+  const aliqIRCalc   = bench === 'focus_lci' ? 0 : aliqIR;
+
+  // ── INFO: qual regra está sendo aplicada ──────────────────────────────────
+  const infoEl = document.getElementById('oc-auto-info');
+  let infoLines = simResults.map((r, i) => {
+    const amortsDaTransche = (simAmorts||[]).filter(a => a.trancheIdx === i);
+    const amortDesc = amortsDaTransche.length > 0
+      ? ' ⚡ ' + amortsDaTransche.map(a => a.tipo==='pontual'
+          ? `${fmt(a.valor)} no mês ${a.mes}`
+          : `${fmt(a.valor)} a cada ${a.freq}m`).join(' + ')
+      : '';
+    return `<strong style="color:${r.color}">${r.label.replace(/^[^\s]+\s/,'')}</strong>: ${fmt(r.valor)} · ${r.prazo}m · ${(r.taxa*100).toFixed(2)}% a.m.<span style="color:var(--accent)">${amortDesc}</span>`;
+  });
+  if (temAmorts) {
+    infoLines.push(`<span style="color:var(--accent);font-size:12px;">↳ Com pré-pagamentos: capital decresce mês a mês — prazo efetivo ${prazoEfetivoReal}m (vs ${maxPrazo}m original)</span>`);
+  } else {
+    infoLines.push(`<span style="color:var(--muted);font-size:12px;">↳ Sem pré-pagamentos: ${fmt(capitalInvestido)} rende pelo prazo integral de ${maxPrazo}m</span>`);
+  }
+  infoEl.innerHTML = infoLines.join('<br>');
+  infoEl.style.display = 'block';
+  let saldoCapital = capitalInvestido;
+  let rendBrutoAcum = 0;
+  let totalPagoAcum = 0;
+
+  const serCapital      = [capitalInvestido];
+  const serPagoAcum     = [0];
+  const serSaldoDevedor = [totalValor];
+  const evolRows        = [];
+
+  for (let m = 1; m <= prazoEfetivoReal; m++) {
+    const taxa = taxasMensais[m-1] || taxasMensais[taxasMensais.length-1];
+    const rendMes = saldoCapital * taxa;
+    rendBrutoAcum += rendMes;
+    saldoCapital  += rendMes;
+
+    const saida       = saidasPorMes[m] || 0;
+    const parcelaNorm = parcelasPorMes[m] || 0;
+    totalPagoAcum    += parcelaNorm + saida;
+    saldoCapital      = Math.max(0, saldoCapital - saida);
+
+    serCapital.push(saldoCapital);
+    serPagoAcum.push(totalPagoAcum);
+    serSaldoDevedor.push(saldoDevedorPorMes[m] || 0);
+
+    evolRows.push({
+      mes: m, parcela: parcelaNorm, aporte: saida,
+      saldoDevedor: saldoDevedorPorMes[m]||0,
+      capitalInvest: saldoCapital,
+      rendMes: rendMes * (1-aliqIRCalc),
+      totalPago: totalPagoAcum,
+      isAporte: saida > 0,
+    });
+  }
+
+  const rendLiquidoCred  = rendBrutoAcum * (1-aliqIRCalc);
+  // Usa juros recalculados (com aportes) para o custo efetivo
+  const jurosEfetivos    = temAmorts ? fluxosRecalc.reduce((s,f) => s + (f.totalJurosRecalc||0), 0) : totalJuros;
+  const custoEfetivoCred = jurosEfetivos - rendLiquidoCred;
+
+  // À vista: capital cheio rendendo pelo mesmo prazo efetivo real (sem saídas)
+  let saldoAv = capitalInvestido, rendBrAv = 0;
+  for (let m = 1; m <= prazoEfetivoReal; m++) {
+    const taxa = taxasMensais[m-1] || taxasMensais[taxasMensais.length-1];
+    const r = saldoAv * taxa; rendBrAv += r; saldoAv += r;
+  }
+  const rendLiquidoAvista = rendBrAv * (1-aliqIRCalc);
+  const custoAvista       = rendLiquidoAvista;
+
+  const taxaMedia     = taxasMensais.slice(0,prazoEfetivoReal).reduce((a,b)=>a+b,0) / prazoEfetivoReal;
+  const taxaMediaAnual = (Math.pow(1+taxaMedia,12)-1)*100;
+  const benchLabel    = bench==='focus_cdi'?'CDI projetado Focus':bench==='focus_90'?'90% CDI Focus':bench==='focus_lci'?'LCI/LCA 85% CDI':bench==='custom'?'Taxa personalizada':'CDI fixo atual';
+  const totalSaidas   = Object.values(saidasPorMes).reduce((a,b)=>a+b,0);
+  const fmtSinal      = n => (n<0?'− ':'')+fmt(Math.abs(n));
+  const periodoLabel  = prazoEfetivoReal < maxPrazo
+    ? `${prazoEfetivoReal}m (quitado antecipadamente vs ${maxPrazo}m original)`
+    : `${prazoEfetivoReal}m`;
+
+  // ── CARDS ──────────────────────────────────────────────────────────────────
   document.getElementById('oc-cards').innerHTML = `
     <div class="stat-card">
-      <div class="stat-label">Juros Pagos (crédito)</div>
+      <div class="stat-label">Juros Pagos ao Crédito</div>
       <div class="stat-value" style="font-size:20px;color:var(--danger)">${fmt(totalJuros)}</div>
-      <div class="stat-sub">custo bruto do financiamento</div>
+      <div class="stat-sub">no período de ${periodoLabel}</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Rendimento do Capital (líq. IR)</div>
-      <div class="stat-value" style="font-size:20px;color:var(--success)">${fmt(rendInvest.liquido)}</div>
-      <div class="stat-sub">${fmt(capitalInvestido)} · ${benchLabel} · ~${taxaMediaAnual.toFixed(2)}% a.a. médio · ${maxPrazo}m</div>
+      <div class="stat-value" style="font-size:20px;color:var(--success)">${fmt(rendLiquidoCred)}</div>
+      <div class="stat-sub">
+        ${fmt(capitalInvestido)} não desembolsado · ${benchLabel} · ~${taxaMediaAnual.toFixed(2)}% a.a.
+        ${temAmorts ? `<br><span style="color:var(--accent)">↓ capital decresce com pré-pagamentos (−${fmt(totalSaidas)})</span>` : ''}
+      </div>
     </div>
-    <div class="stat-card" style="border-color:${custoEfetivoCred<0?'rgba(74,222,128,0.3)':'rgba(201,169,110,0.3)'}">
+    <div class="stat-card" style="border-color:${custoEfetivoCred<0?'rgba(74,222,128,0.3)':'rgba(61,117,78,0.4)'}">
       <div class="stat-label">Custo Efetivo Líquido</div>
       <div class="stat-value" style="font-size:20px;color:${custoEfetivoCred<0?'var(--success)':'var(--accent)'}">${fmtSinal(custoEfetivoCred)}</div>
-      <div class="stat-sub">${custoEfetivoCred<0?'✓ Crédito gera ganho líquido':'custo real após rendimento do capital'}</div>
+      <div class="stat-sub">${custoEfetivoCred<0?'✓ Financiar é melhor que pagar à vista':'custo real = juros − rendimento do capital'}</div>
     </div>
   `;
 
+  // ── COMPARATIVO ────────────────────────────────────────────────────────────
+  const cenariosAlt = [
+    {
+      label: '💰 Pagar à vista — capital sai da carteira',
+      sublabel: 'Custo = rendimento que deixa de ter',
+      juros: 0, rendimento: rendLiquidoAvista, custoLiq: rendLiquidoAvista
+    },
+    {
+      label: '⊕ Financiar — capital fica investido',
+      sublabel: temAmorts ? `Com pré-pagamentos de ${fmt(Object.values(saidasPorMes).reduce((a,b)=>a+b,0))}` : 'Sem pré-pagamentos',
+      juros: totalJuros, rendimento: rendLiquidoCred, custoLiq: custoEfetivoCred, isThis: true
+    },
+  ];
   document.getElementById('oc-table-body').innerHTML = cenariosAlt.map(c => {
     const isBest = c.custoLiq === Math.min(...cenariosAlt.map(x=>x.custoLiq));
-    const bg = c.isThis ? 'background:rgba(201,169,110,0.06)' : '';
-    const custoColor = c.custoLiq < 0 ? 'var(--success)' : c.custoLiq > custoAvista*1.3 ? 'var(--danger)' : 'var(--text)';
-    const veredicto = c.custoLiq < 0 ? '✓ Gera ganho' : isBest ? '⭐ Menor custo' : c.isThis ? '← Este cenário' : '';
+    const bg = c.isThis ? 'background:rgba(61,117,78,0.08)' : '';
+    const custoColor = c.custoLiq < 0 ? 'var(--success)' : 'var(--text)';
+    const veredicto = c.custoLiq<0?'✓ Gera ganho líquido':isBest?'⭐ Menor custo':'';
     return `<tr style="${bg}">
-      <td style="padding:12px 14px;border-bottom:1px solid var(--border);font-weight:${c.isThis?'600':'400'};color:${c.isThis?'var(--accent)':'var(--text)'}">${c.label}</td>
-      <td style="padding:12px 14px;border-bottom:1px solid var(--border);text-align:right;font-family:'DM Mono',monospace;font-size:12px;color:var(--danger)">${c.juros>0?fmt(c.juros):'–'}</td>
-      <td style="padding:12px 14px;border-bottom:1px solid var(--border);text-align:right;font-family:'DM Mono',monospace;font-size:12px;color:var(--success)">${fmt(c.rendimento)}</td>
-      <td style="padding:12px 14px;border-bottom:1px solid var(--border);text-align:right;font-family:'DM Mono',monospace;font-size:12px;color:${custoColor};font-weight:${isBest?'600':'400'}">${fmtSinal(c.custoLiq)}</td>
+      <td style="padding:12px 14px;border-bottom:1px solid var(--border);">
+        <div style="font-weight:${c.isThis?'600':'400'};color:${c.isThis?'var(--accent)':'var(--text)'}">${c.label}</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px;">${c.sublabel}</div>
+      </td>
+      <td style="padding:12px 14px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;font-size:12px;color:var(--danger)">${c.juros>0?fmt(c.juros):'–'}</td>
+      <td style="padding:12px 14px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;font-size:12px;color:var(--success)">${fmt(c.rendimento)}</td>
+      <td style="padding:12px 14px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;font-size:12px;color:${custoColor};font-weight:${isBest?'600':'400'}">${fmtSinal(c.custoLiq)}</td>
       <td style="padding:12px 14px;border-bottom:1px solid var(--border);text-align:right;font-size:12px;color:${isBest?'var(--success)':'var(--muted)'}">${veredicto}</td>
     </tr>`;
   }).join('');
 
+  // ── GRÁFICO ────────────────────────────────────────────────────────────────
+  drawOCChart(serCapital, serPagoAcum, serSaldoDevedor, prazoEfetivoReal);
+
+  // ── TABELA DE EVOLUÇÃO ─────────────────────────────────────────────────────
+  const totalParcelasEvol  = evolRows.reduce((s,r) => s + r.parcela, 0);
+  const totalAportesEvol   = evolRows.reduce((s,r) => s + r.aporte, 0);
+  const totalRendEvol      = evolRows.reduce((s,r) => s + r.rendMes, 0);
+
+  document.getElementById('oc-evol-body').innerHTML = evolRows.map(r => {
+    const bg = r.isAporte ? 'background:rgba(61,117,78,0.07)' : '';
+    const saldoColor = r.saldoDevedor <= 0.01 ? 'var(--success)' : 'var(--text)';
+    return `<tr style="${bg}">
+      <td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center;color:${r.isAporte?'var(--accent)':'var(--muted)'};font-weight:${r.isAporte?'600':'400'}">${r.mes}${r.isAporte?' ⚡':''}</td>
+      <td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;color:var(--danger)">${r.parcela>0?fmt(r.parcela):'–'}</td>
+      <td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:right">${r.aporte>0?`<span style="color:var(--accent);font-family:'DM Mono',monospace">${fmt(r.aporte)} ⚡</span>`:'<span style="color:var(--muted)">–</span>'}</td>
+      <td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;color:${saldoColor}">${r.saldoDevedor>0.01?fmt(r.saldoDevedor):'Quitado ✓'}</td>
+      <td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;color:var(--success)">${fmt(r.capitalInvest)}</td>
+      <td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;font-size:11px;color:var(--success)">+${fmt(r.rendMes)}</td>
+      <td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;color:var(--muted)">${fmt(r.totalPago)}</td>
+    </tr>`;
+  }).join('');
+
+  // Linha de totais no rodapé
+  const footStyle = 'padding:10px 12px;text-align:right;font-family:"DM Mono",monospace;font-size:12px;font-weight:600;background:var(--surface2);border-top:2px solid var(--border)';
+  document.getElementById('oc-evol-foot').innerHTML = `<tr>
+    <td style="${footStyle};text-align:center;color:var(--muted);font-family:'Ubuntu',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:1px;">Total</td>
+    <td style="${footStyle};color:var(--danger)">${fmt(totalParcelasEvol)}</td>
+    <td style="${footStyle};color:var(--accent)">${totalAportesEvol>0?fmt(totalAportesEvol):'–'}</td>
+    <td style="${footStyle};color:var(--muted)">–</td>
+    <td style="${footStyle};color:var(--muted)">–</td>
+    <td style="${footStyle};color:var(--success)">+${fmt(totalRendEvol)}</td>
+    <td style="${footStyle};color:var(--text)">${fmt(evolRows[evolRows.length-1]?.totalPago||0)}</td>
+  </tr>`;
+
+  // ── INSIGHT ────────────────────────────────────────────────────────────────
   const insightEl = document.getElementById('oc-insight');
   const selicPath = `Selic: atual ${SELIC_ATUAL}% → ${FOCUS_SELIC[2026]}% (2026) → ${FOCUS_SELIC[2027]}% (2027) → ${FOCUS_SELIC[2028]}% (2028)`;
+  const notaAmort = temAmorts ? ` Os pré-pagamentos reduzem o capital investido ao longo do tempo — o rendimento reflete esse saldo decrescente.` : '';
   let insight = '';
   if (custoEfetivoCred < 0) {
-    insight = `<strong style="color:var(--success)">✓ Crédito compensa financeiramente.</strong> Com o CDI projetado pelo Focus BCB (${selicPath}), o rendimento do capital mantido (${fmt(rendInvest.liquido)} líq. IR) supera os juros do crédito (${fmt(totalJuros)}). Manter o capital aplicado e usar crédito gera ganho líquido de ${fmt(Math.abs(custoEfetivoCred))}.`;
-    insightEl.style.background = 'rgba(74,222,128,0.06)';
-    insightEl.style.border = '1px solid rgba(74,222,128,0.2)';
+    insight = `<strong style="color:var(--success)">✓ Financiar compensa.</strong> O rendimento do capital não desembolsado (${fmt(rendLiquidoCred)} líq. IR) supera os juros do crédito (${fmt(totalJuros)}). Ganho líquido de ${fmt(Math.abs(custoEfetivoCred))}.${notaAmort} Projeção Focus: ${selicPath}.`;
+    insightEl.style.background='rgba(74,222,128,0.06)'; insightEl.style.border='1px solid rgba(74,222,128,0.2)';
   } else if (custoEfetivoCred < custoAvista * 0.6) {
-    insight = `<strong style="color:var(--accent)">↗ Crédito reduz o custo significativamente.</strong> Pagar à vista destruiria ${fmt(custoAvista)} em rendimento (${benchLabel}). Com crédito, custo efetivo cai para ${fmt(custoEfetivoCred)} — ${((1-custoEfetivoCred/custoAvista)*100).toFixed(0)}% mais barato. Projeção Focus: ${selicPath}.`;
-    insightEl.style.background = 'rgba(201,169,110,0.06)';
-    insightEl.style.border = '1px solid rgba(201,169,110,0.2)';
+    insight = `<strong style="color:var(--accent)">↗ Financiar reduz o custo vs pagar à vista.</strong> Pagar à vista perderia ${fmt(custoAvista)} em rendimento. Financiando, o custo real cai para ${fmt(custoEfetivoCred)} — ${((1-custoEfetivoCred/custoAvista)*100).toFixed(0)}% mais barato.${notaAmort} Projeção Focus: ${selicPath}.`;
+    insightEl.style.background='rgba(61,117,78,0.08)'; insightEl.style.border='1px solid rgba(61,117,78,0.3)';
   } else {
-    insight = `<strong style="color:var(--muted)">⚖ Custo próximo ao de pagar à vista.</strong> Crédito custa ${fmt(custoEfetivoCred)} líquido vs ${fmt(custoAvista)} de rendimento perdido à vista. Diferença: ${fmt(Math.abs(custoEfetivoCred-custoAvista))}. Projeção Focus: ${selicPath}.`;
-    insightEl.style.background = 'rgba(255,255,255,0.03)';
-    insightEl.style.border = '1px solid var(--border)';
+    insight = `<strong style="color:var(--muted)">⚖ Custo próximo ao de pagar à vista.</strong> Financiar custa ${fmt(custoEfetivoCred)} líquido vs ${fmt(custoAvista)} de rendimento perdido à vista. Diferença: ${fmt(Math.abs(custoEfetivoCred-custoAvista))}.${notaAmort} Projeção Focus: ${selicPath}.`;
+    insightEl.style.background='rgba(255,255,255,0.03)'; insightEl.style.border='1px solid var(--border)';
   }
   insightEl.innerHTML = insight;
   document.getElementById('oc-result').style.display = 'block';
+  document.getElementById('oc-result').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+
+function drawOCChart(serCapital, serPagoAcum, serSaldoDevedor, prazoEfetivo) {
+  const canvas = document.getElementById('oc-chart');
+  if (!canvas) return;
+  setTimeout(() => {
+    const ctx = canvas.getContext('2d');
+    canvas.width = canvas.offsetWidth || 800;
+    canvas.height = 280;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    const W = canvas.width, H = canvas.height;
+    const padL = 80, padR = 24, padT = 20, padB = 40;
+    const cW = W - padL - padR, cH = H - padT - padB;
+
+    const allVals = [...serCapital, ...serPagoAcum, ...serSaldoDevedor];
+    const maxVal = Math.max(...allVals, 1);
+    const toX = m => padL + (m / prazoEfetivo) * cW;
+    const toY = v => padT + cH - (v / maxVal) * cH;
+
+    // Grid lines
+    ctx.strokeStyle = 'rgba(255,255,255,0.05)'; ctx.lineWidth = 1;
+    for (let i = 0; i <= 4; i++) {
+      const y = padT + (cH/4)*i;
+      ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W-padR, y); ctx.stroke();
+      const v = maxVal*(1-i/4);
+      ctx.fillStyle = 'rgba(107,104,128,0.8)'; ctx.font = '10px DM Sans,sans-serif'; ctx.textAlign = 'right';
+      ctx.fillText('R$'+(v>=1e6?(v/1e6).toFixed(1)+'M':(v/1e3).toFixed(0)+'k'), padL-6, y+4);
+    }
+
+    function drawLine(data, color, dash=[]) {
+      ctx.beginPath(); ctx.strokeStyle = color; ctx.lineWidth = 2.5; ctx.setLineDash(dash);
+      data.forEach((v, m) => { m===0?ctx.moveTo(toX(m),toY(v)):ctx.lineTo(toX(m),toY(v)); });
+      ctx.stroke(); ctx.setLineDash([]);
+    }
+    function drawFill(data, color) {
+      ctx.beginPath();
+      data.forEach((v,m)=>{ m===0?ctx.moveTo(toX(m),toY(v)):ctx.lineTo(toX(m),toY(v)); });
+      ctx.lineTo(toX(prazoEfetivo), toY(0)); ctx.lineTo(toX(0), toY(0)); ctx.closePath();
+      ctx.fillStyle = color; ctx.fill();
+    }
+
+    // Draw series
+    drawLine(serSaldoDevedor, 'rgba(248,113,113,0.7)', [6,3]);
+    drawFill(serCapital, 'rgba(74,222,128,0.08)');
+    drawLine(serCapital, '#4ade80');
+    drawLine(serPagoAcum, '#3D754E');
+
+    // Dots at aporte months (capital drops)
+    serCapital.forEach((v, m) => {
+      if (m > 0 && serCapital[m] < serCapital[m-1] - 100) {
+        ctx.beginPath(); ctx.arc(toX(m), toY(v), 4, 0, Math.PI*2);
+        ctx.fillStyle = '#3D754E'; ctx.fill();
+      }
+    });
+
+    // Quitação marker: vertical line at last month where saldo devedor hits 0
+    const quitMes = serSaldoDevedor.findIndex((v, i) => i > 0 && v <= 0.01);
+    if (quitMes > 0 && quitMes < prazoEfetivo) {
+      const xQ = toX(quitMes);
+      ctx.beginPath(); ctx.strokeStyle = 'rgba(74,222,128,0.5)'; ctx.lineWidth = 1.5; ctx.setLineDash([4,3]);
+      ctx.moveTo(xQ, padT); ctx.lineTo(xQ, padT + cH); ctx.stroke(); ctx.setLineDash([]);
+      ctx.fillStyle = 'rgba(74,222,128,0.9)'; ctx.font = 'bold 10px DM Sans,sans-serif'; ctx.textAlign = 'center';
+      ctx.fillText('Quitado ✓', xQ, padT - 6);
+    }
+
+    // X labels
+    ctx.fillStyle = 'rgba(107,104,128,0.8)'; ctx.font = '10px DM Sans,sans-serif'; ctx.textAlign = 'center';
+    const step = prazoEfetivo <= 12 ? 1 : prazoEfetivo <= 24 ? 3 : prazoEfetivo <= 60 ? 6 : prazoEfetivo <= 120 ? 12 : 24;
+    for (let m = 0; m <= prazoEfetivo; m += step) ctx.fillText(m+'m', toX(m), H-padB+16);
+
+    // Legend
+    const legendEl = document.getElementById('oc-chart-legend');
+    if (legendEl) legendEl.innerHTML = [
+      { color: '#4ade80',               label: 'Capital investido (decresce com aportes)', dash: false },
+      { color: '#3D754E',               label: 'Total pago ao crédito (acumulado)',        dash: false },
+      { color: 'rgba(248,113,113,0.8)', label: 'Saldo devedor',                            dash: true  },
+    ].map(l => `
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);">
+        <svg width="24" height="10" style="flex-shrink:0">
+          <line x1="0" y1="5" x2="24" y2="5" stroke="${l.color}" stroke-width="2.5"
+            ${l.dash?'stroke-dasharray="5,3"':''}/>
+        </svg>
+        ${l.label}
+      </div>`).join('');
+  }, 50);
+}
+
+// ==================== PERFIL BANKER ====================
+const BANKER_KEY     = 'rts_banker_atual';
+const BANKER_LIST_KEY = 'rts_banker_lista';
+
+function getBankerAtual() {
+  return localStorage.getItem(BANKER_KEY) || '';
+}
+
+function getStorageKey() {
+  const b = getBankerAtual();
+  return b ? `rts_cenarios_${b.toLowerCase().replace(/\s+/g,'_')}` : 'rts_credito_cenarios';
+}
+
+function getBankerLista() {
+  try { return JSON.parse(localStorage.getItem(BANKER_LIST_KEY) || '[]'); } catch { return []; }
+}
+
+function confirmarBanker() {
+  const nome = document.getElementById('banker-nome-input').value.trim();
+  if (!nome) { document.getElementById('banker-nome-input').focus(); return; }
+
+  localStorage.setItem(BANKER_KEY, nome);
+  // Adiciona à lista de perfis conhecidos
+  const lista = getBankerLista();
+  if (!lista.includes(nome)) { lista.push(nome); localStorage.setItem(BANKER_LIST_KEY, JSON.stringify(lista)); }
+
+  document.getElementById('modal-banker').style.display = 'none';
+  atualizarSidebarBanker();
+  renderCenariosSalvos();
+}
+
+function trocarBanker() {
+  document.getElementById('banker-nome-input').value = '';
+  renderProfilesRecentes();
+  document.getElementById('modal-banker').style.display = 'flex';
+  setTimeout(() => document.getElementById('banker-nome-input').focus(), 100);
+}
+
+function renderProfilesRecentes() {
+  const lista = getBankerLista();
+  const el = document.getElementById('banker-profiles-recentes');
+  if (!lista.length) { el.innerHTML = ''; return; }
+  el.innerHTML = `
+    <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Perfis recentes</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;">
+      ${lista.map(n => `
+        <button onclick="selecionarPerfilRapido('${n}')"
+          style="padding:7px 14px;background:rgba(61,117,78,0.1);border:1px solid rgba(61,117,78,0.3);border-radius:8px;color:var(--accent);font-family:'Ubuntu',sans-serif;font-size:12px;font-weight:600;cursor:pointer;">
+          ${n}
+        </button>`).join('')}
+    </div>`;
+}
+
+function selecionarPerfilRapido(nome) {
+  document.getElementById('banker-nome-input').value = nome;
+  confirmarBanker();
+}
+
+function atualizarSidebarBanker() {
+  const nome = getBankerAtual();
+  if (!nome) return;
+  const avatar = nome.charAt(0).toUpperCase();
+  document.getElementById('sidebar-banker-avatar').textContent = avatar;
+  document.getElementById('sidebar-banker-nome').textContent = nome;
+}
+
+// ==================== CENÁRIOS SALVOS ====================
+const STORAGE_KEY = 'rts_credito_cenarios'; // fallback legacy
+
+function getCenariosSalvos() {
+  try { return JSON.parse(localStorage.getItem(getStorageKey()) || '[]'); } catch { return []; }
+}
+function saveCenarios(list) {
+  try { localStorage.setItem(getStorageKey(), JSON.stringify(list)); } catch(e) { console.warn('localStorage indisponível'); }
+}
+
+function salvarCenario() {
+  if (!simResults.length) { alert('Simule um cenário primeiro.'); return; }
+  const nome = document.getElementById('save-nome').value.trim() || `Cenário ${new Date().toLocaleTimeString('pt-BR', {hour:'2-digit',minute:'2-digit'})}`;
+
+  // Snapshot dos dados relevantes
+  const snap = {
+    id: Date.now(),
+    nome,
+    data: new Date().toLocaleDateString('pt-BR'),
+    hora: new Date().toLocaleTimeString('pt-BR', {hour:'2-digit', minute:'2-digit'}),
+    tranches: simResults.map((r, i) => {
+      // Recalcula fluxo COM aportes para esta tranche
+      let totalJurosComAmort = r.totalJuros;
+      let parcelaComAmort = r.parcela;
+      let prazoEfetivoComAmort = r.prazoEfetivo;
+      let rowsComAmort = r.rows || [];
+
+      if (!r.isFullBullet) {
+        const amortList = [];
+        (simAmorts||[]).filter(a=>a.trancheIdx===i).forEach(a => {
+          if (a.tipo==='pontual') {
+            amortList.push({mes:a.mes, valor:a.valor, modo:a.modo});
+          } else {
+            for (let m=a.inicio; m<=r.prazo; m+=a.freq)
+              amortList.push({mes:m, valor:a.valor, modo:a.modo});
+          }
+        });
+        if (amortList.length > 0) {
+          const calc = calcTrancheFluxo(r.valor, r.prazo, r.taxa, r.sistema, false, amortList);
+          totalJurosComAmort = calc.totalJuros;
+          parcelaComAmort = calc.parcela;
+          prazoEfetivoComAmort = calc.prazoEfetivo;
+          rowsComAmort = calc.rows || [];
+        }
+      }
+
+      return {
+        label: r.label.replace(/^[^\s]+\s/,''),
+        prod: r.prod,
+        valor: r.valor,
+        taxa: r.taxa,
+        prazo: r.prazo,
+        sistema: r.isFullBullet ? 'Bullet Total' : r.sistema?.toUpperCase() || 'PRICE',
+        totalJuros: totalJurosComAmort,
+        parcela: parcelaComAmort,
+        prazoEfetivo: prazoEfetivoComAmort,
+        color: r.color,
+        isFullBullet: r.isFullBullet,
+        montante: r.montante,
+        rows: rowsComAmort.slice(0,120).map(row => ({
+          mes: row.mes,
+          parcela: Math.round(row.parcela*100)/100,
+          juros: Math.round(row.juros*100)/100,
+          amortExtra: Math.round((row.amortExtra||0)*100)/100,
+          saldo: Math.round(row.saldo*100)/100,
+        })),
+      };
+    }),
+    amorts: (simAmorts||[]).map(a => ({
+      trancheIdx: a.trancheIdx,
+      valor: a.valor,
+      tipo: a.tipo,
+      freq: a.freq,
+      inicio: a.inicio,
+      mes: a.mes,
+      modo: a.modo,
+    })),
+    // totais COM pré-pagamentos — recalcula com simAmorts para garantir que está correto
+    // independente de o banker ter clicado em "Aplicar aportes" ou não
+    totais: (() => {
+      const totalValor = simResults.reduce((s,r)=>s+r.valor,0);
+      let totalJuros = 0, totalParcela = 0, prazoMax = 0;
+      simResults.forEach((r, i) => {
+        if (r.isFullBullet) {
+          totalJuros += r.montante - r.valor;
+          prazoMax = Math.max(prazoMax, r.prazo);
+          return;
+        }
+        // Monta aportes desta tranche a partir de simAmorts
+        const amortList = [];
+        (simAmorts||[]).filter(a=>a.trancheIdx===i).forEach(a => {
+          if (a.tipo==='pontual') {
+            amortList.push({mes:a.mes, valor:a.valor, modo:a.modo});
+          } else {
+            for (let m=a.inicio; m<=r.prazo; m+=a.freq)
+              amortList.push({mes:m, valor:a.valor, modo:a.modo});
+          }
+        });
+        const calc = calcTrancheFluxo(r.valor, r.prazo, r.taxa, r.sistema, false, amortList);
+        totalJuros  += calc.totalJuros;
+        totalParcela += calc.parcela;
+        prazoMax = Math.max(prazoMax, calc.prazoEfetivo);
+      });
+      return {
+        valor: totalValor,
+        juros: Math.round(totalJuros*100)/100,
+        parcela: Math.round(totalParcela*100)/100,
+        prazoMax,
+      };
+    })(),
+    // totais SEM pré-pagamentos — sempre fluxo limpo para comparativo PDF
+    totaisSemAmort: (() => {
+      const semJuros = simResults.reduce((s,r) => {
+        if (r.isFullBullet) return s + (r.montante - r.valor);
+        const calc = calcTrancheFluxo(r.valor, r.prazo, r.taxa, r.sistema, false, []);
+        return s + calc.totalJuros;
+      }, 0);
+      const semParcela = simResults.reduce((s,r) => {
+        if (r.isFullBullet) return s;
+        const taxa = r.taxa, prazo = r.prazo, valor = r.valor;
+        const pmt = taxa===0 ? valor/prazo : valor*(taxa*Math.pow(1+taxa,prazo))/(Math.pow(1+taxa,prazo)-1);
+        return s + pmt;
+      }, 0);
+      return {
+        juros: Math.round(semJuros*100)/100,
+        parcela: Math.round(semParcela*100)/100,
+        prazoMax: Math.max(...simResults.map(r=>r.prazo)),
+      };
+    })(),
+    // Custo de oportunidade — captura se o resultado estiver visível
+    oc: (() => {
+      const res = document.getElementById('oc-result');
+      if (!res || res.style.display === 'none') return null;
+      return {
+        juros: document.getElementById('oc-cards')?.querySelector('.stat-value')?.textContent || null,
+        rendimento: document.getElementById('oc-cards')?.querySelectorAll('.stat-value')[1]?.textContent || null,
+        custoLiq: document.getElementById('oc-cards')?.querySelectorAll('.stat-value')[2]?.textContent || null,
+        insight: document.getElementById('oc-insight')?.textContent?.trim().substring(0,200) || null,
+      };
+    })(),
+  };
+
+  const lista = getCenariosSalvos();
+  lista.push(snap);
+  saveCenarios(lista);
+
+  // Feedback
+  document.getElementById('save-nome').value = '';
+  const fb = document.getElementById('save-feedback');
+  fb.style.display = 'inline';
+  setTimeout(() => fb.style.display = 'none', 2000);
+
+  renderCenariosSalvos();
+}
+
+function deletarCenario(id) {
+  const lista = getCenariosSalvos().filter(c => c.id !== id);
+  saveCenarios(lista);
+  renderCenariosSalvos();
+}
+
+function limparCenarios() {
+  if (!confirm('Apagar todos os cenários salvos?')) return;
+  saveCenarios([]);
+  renderCenariosSalvos();
+}
+
+function renderCenariosSalvos() {
+  const lista = getCenariosSalvos();
+  const banker = getBankerAtual();
+
+  // Update banker banner
+  const bannerAvatar = document.getElementById('saved-banker-avatar');
+  const bannerNome   = document.getElementById('saved-banker-nome');
+  const bannerCount  = document.getElementById('saved-banker-count');
+  if (bannerAvatar) bannerAvatar.textContent = banker ? banker.charAt(0).toUpperCase() : '?';
+  if (bannerNome)   bannerNome.textContent   = banker || 'Nenhum perfil selecionado';
+  if (bannerCount)  bannerCount.textContent  = `${lista.length} cenário(s) salvo(s)`;
+
+  const empty   = document.getElementById('saved-empty');
+  const content = document.getElementById('saved-content');
+  const count   = document.getElementById('saved-count');
+  const cards   = document.getElementById('saved-cards');
+  const compare = document.getElementById('saved-compare');
+
+  if (!lista.length) {
+    empty.style.display = 'block';
+    content.style.display = 'none';
+    return;
+  }
+  empty.style.display = 'none';
+  content.style.display = 'block';
+  count.textContent = lista.length + ' cenário(s) salvo(s)';
+
+  // Cards
+  cards.innerHTML = lista.map(c => `
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;">
+      <div style="display:flex;align-items:start;justify-content:space-between;margin-bottom:16px;">
+        <div>
+          <div style="font-size:16px;font-weight:600;color:var(--text)">${c.nome}</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px;">${c.data}${c.hora?' às '+c.hora:''}</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+          <button onclick="abrirDetalhe(${c.id})"
+            style="padding:7px 14px;background:rgba(61,117,78,0.12);border:1px solid rgba(61,117,78,0.4);border-radius:8px;color:var(--accent);font-family:'Ubuntu',sans-serif;font-size:12px;font-weight:600;cursor:pointer;">
+            Ver detalhe →
+          </button>
+          <button onclick="deletarCenario(${c.id})" style="background:transparent;border:none;color:var(--muted);cursor:pointer;font-size:18px;padding:0 4px;line-height:1;">×</button>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-bottom:16px;">
+        <div style="background:var(--bg);border-radius:8px;padding:12px;">
+          <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Valor total</div>
+          <div style="font-family:'Courier New',monospace;font-size:14px;color:var(--text)">${fmt(c.totais.valor)}</div>
+        </div>
+        <div style="background:var(--bg);border-radius:8px;padding:12px;">
+          <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Parcela total</div>
+          <div style="font-family:'Courier New',monospace;font-size:14px;color:var(--accent)">${fmt(c.totais.parcela)}/mês</div>
+        </div>
+        <div style="background:var(--bg);border-radius:8px;padding:12px;">
+          <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Total juros</div>
+          <div style="font-family:'Courier New',monospace;font-size:14px;color:var(--danger)">${fmt(c.totais.juros)}</div>
+        </div>
+        <div style="background:var(--bg);border-radius:8px;padding:12px;">
+          <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Prazo ef.</div>
+          <div style="font-family:'Courier New',monospace;font-size:14px;color:var(--text)">${c.totais.prazoMax}m</div>
+        </div>
+      </div>
+      <!-- Tranches -->
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        ${c.tranches.map(t => `
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;">
+            <span style="width:8px;height:8px;border-radius:50%;background:${t.color};flex-shrink:0"></span>
+            <span style="color:var(--text);flex:1">${t.label}</span>
+            <span style="font-family:'Courier New',monospace;color:var(--muted)">${fmt(t.valor)}</span>
+            <span style="font-family:'Courier New',monospace;color:var(--muted)">${(t.taxa*100).toFixed(2)}% a.m.</span>
+            <span style="font-family:'Courier New',monospace;color:var(--muted)">${t.prazo}m ${t.sistema}</span>
+          </div>`).join('')}
+        ${c.amorts && c.amorts.length ? `<div style="font-size:11px;color:var(--accent);margin-top:4px;">⚡ ${c.amorts.length} pré-pagamento(s) · Prazo ef. ${c.totais.prazoMax}m</div>` : ''}
+        ${c.oc ? `<div style="font-size:11px;color:var(--success);margin-top:2px;">📊 Custo efetivo líq: ${c.oc.custoLiq}</div>` : ''}
+      </div>
+    </div>
+  `).join('');
+
+  // Tabela comparativa (só se >1 cenário)
+  if (lista.length < 2) { compare.style.display = 'none'; return; }
+  compare.style.display = 'block';
+
+  const thStyle = 'padding:12px 16px;background:var(--surface2);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;text-align:right;font-weight:500;white-space:nowrap;';
+  const tdStyle = (bold, color) => `padding:12px 16px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;font-size:13px;${bold?'font-weight:600;':''}${color?'color:'+color+';':''}`;
+  const labelStyle = 'padding:12px 16px;border-bottom:1px solid var(--border);font-size:12px;color:var(--muted);font-weight:500;white-space:nowrap;';
+
+  const rows = [
+    { label: 'Valor financiado',   key: 'valor',    color: '' },
+    { label: 'Parcela mensal',     key: 'parcela',  color: 'var(--accent)' },
+    { label: 'Total de juros',     key: 'juros',    color: 'var(--danger)' },
+    { label: 'Custo total',        key: 'custo',    color: '' },
+    { label: 'Prazo efetivo',      key: 'prazo',    color: '', suffix: 'm' },
+  ];
+
+  const headers = ['<th style="'+thStyle+';text-align:left;">Métrica</th>',
+    ...lista.map(c => `<th style="${thStyle}">${c.nome}</th>`)].join('');
+
+  // Find best (lowest) for each row
+  const tableRows = rows.map(row => {
+    const vals = lista.map(c => {
+      if (row.key === 'custo') return c.totais.valor + c.totais.juros;
+      if (row.key === 'prazo') return c.totais.prazoMax;
+      return c.totais[row.key === 'parcela' ? 'parcela' : row.key === 'juros' ? 'juros' : row.key] || 0;
+    });
+    const minVal = Math.min(...vals);
+    const cells = vals.map((v, i) => {
+      const isBest = v === minVal;
+      const color = isBest ? 'var(--success)' : (row.color || '');
+      const display = row.suffix ? v + row.suffix : fmt(v);
+      return `<td style="${tdStyle(isBest, color)}">${display}${isBest?' ⭐':''}</td>`;
+    }).join('');
+    return `<tr><td style="${labelStyle}">${row.label}</td>${cells}</tr>`;
+  }).join('');
+
+  document.getElementById('saved-table').innerHTML =
+    `<thead><tr>${headers}</tr></thead><tbody>${tableRows}</tbody>`;
+}
+
+// ==================== MODAL DETALHE CENÁRIO ====================
+function abrirDetalhe(id) {
+  _pdfCenarioId = id;
+  const lista = getCenariosSalvos();
+  const c = lista.find(x => x.id === id);
+  if (!c) return;
+  window._modalCenarioNome = c.nome;
+
+  const modal = document.getElementById('modal-cenario');
+  const body  = document.getElementById('modal-body');
+
+  // Monta HTML do detalhe
+  const amortDesc = c.amorts && c.amorts.length
+    ? c.amorts.map(a => {
+        const tLabel = c.tranches[a.trancheIdx]?.label || '';
+        return a.tipo === 'pontual'
+          ? `${fmt(a.valor)} no mês ${a.mes} — ${tLabel}`
+          : `${fmt(a.valor)} a cada ${a.freq}m (início mês ${a.inicio||a.freq}) — ${tLabel} — objetivo: ${a.modo==='prazo'?'reduzir prazo':'reduzir parcela'}`;
+      }).join('<br>')
+    : '<span style="color:var(--muted)">Nenhum</span>';
+
+  const tranchesHtml = c.tranches.map(t => {
+    // Fluxo resumido: a cada 3 meses ou nos meses de aporte
+    const rowsToShow = t.rows && t.rows.length
+      ? t.rows.filter((r,i) => i===0 || i===t.rows.length-1 || r.amortExtra>0 || i%3===2)
+      : [];
+
+    const tableHtml = rowsToShow.length ? `
+      <div style="overflow-x:auto;max-height:220px;overflow-y:auto;border-radius:8px;border:1px solid var(--border);margin-top:12px;">
+        <table style="width:100%;border-collapse:collapse;font-size:11px;">
+          <thead><tr>
+            <th style="padding:7px 10px;background:var(--surface2);color:var(--muted);text-align:center;">Mês</th>
+            <th style="padding:7px 10px;background:var(--surface2);color:var(--muted);text-align:right;">Parcela</th>
+            <th style="padding:7px 10px;background:var(--surface2);color:var(--muted);text-align:right;">Juros</th>
+            <th style="padding:7px 10px;background:var(--surface2);color:var(--muted);text-align:right;">Amort. Extra</th>
+            <th style="padding:7px 10px;background:var(--surface2);color:var(--muted);text-align:right;">Saldo</th>
+          </tr></thead>
+          <tbody>${rowsToShow.map(r => `<tr style="${r.amortExtra>0?'background:rgba(61,117,78,0.07)':''}">
+            <td style="padding:6px 10px;border-bottom:1px solid var(--border);text-align:center;color:${r.amortExtra>0?'var(--accent)':'var(--muted)'}">${r.mes}${r.amortExtra>0?' ⚡':''}</td>
+            <td style="padding:6px 10px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;color:var(--danger)">${fmt(r.parcela)}</td>
+            <td style="padding:6px 10px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;font-size:10px">${fmt(r.juros)}</td>
+            <td style="padding:6px 10px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;color:${r.amortExtra>0?'var(--accent)':'var(--muted)'}">${r.amortExtra>0?fmt(r.amortExtra):'–'}</td>
+            <td style="padding:6px 10px;border-bottom:1px solid var(--border);text-align:right;font-family:'Courier New',monospace;color:${r.saldo<=0.01?'var(--success)':'var(--text)'}">${r.saldo<=0.01?'Quitado ✓':fmt(r.saldo)}</td>
+          </tr>`).join('')}</tbody>
+        </table>
+      </div>` : '';
+
+    return `
+      <div style="background:var(--surface2);border:1px solid var(--border);border-left:3px solid ${t.color};border-radius:10px;padding:18px;margin-bottom:14px;">
+        <div style="font-size:14px;font-weight:600;color:${t.color};margin-bottom:12px;">${t.label}</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-bottom:8px;">
+          ${[
+            ['Principal', fmt(t.valor)],
+            ['Taxa', (t.taxa*100).toFixed(2)+'% a.m.'],
+            ['Prazo', t.prazo+'m ('+t.sistema+')'],
+            ['Parcela', t.isFullBullet?'R$ 0 (Bullet)':fmt(t.parcela)+'/mês'],
+            ['Juros totais', fmt(t.totalJuros)],
+            ['Custo total', fmt(t.valor+t.totalJuros)],
+          ].map(([k,v]) => `<div style="background:var(--bg);border-radius:6px;padding:8px;">
+            <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px">${k}</div>
+            <div style="font-family:'Courier New',monospace;font-size:12px;color:var(--text)">${v}</div>
+          </div>`).join('')}
+        </div>
+        ${tableHtml}
+      </div>`;
+  }).join('');
+
+  const ocHtml = c.oc ? `
+    <div style="background:rgba(61,117,78,0.08);border:1px solid rgba(61,117,78,0.3);border-radius:10px;padding:16px;margin-top:16px;">
+      <div style="font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Custo de Oportunidade</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:10px;">
+        <div><div style="font-size:10px;color:var(--muted)">Juros pagos</div><div style="font-family:'Courier New',monospace;font-size:13px;color:var(--danger)">${c.oc.juros||'–'}</div></div>
+        <div><div style="font-size:10px;color:var(--muted)">Rendimento capital</div><div style="font-family:'Courier New',monospace;font-size:13px;color:var(--success)">${c.oc.rendimento||'–'}</div></div>
+        <div><div style="font-size:10px;color:var(--muted)">Custo efetivo líq.</div><div style="font-family:'Courier New',monospace;font-size:13px;color:var(--accent)">${c.oc.custoLiq||'–'}</div></div>
+      </div>
+      ${c.oc.insight ? `<div style="font-size:12px;color:var(--muted);line-height:1.6">${c.oc.insight}…</div>` : ''}
+    </div>` : '';
+
+  body.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:20px;">
+      <div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:700;color:var(--text)">${c.nome}</h2>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px;">${c.data} às ${c.hora||''}</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;text-align:right;">
+        <div><div style="font-size:10px;color:var(--muted)">Valor total</div><div style="font-family:'Courier New',monospace;font-size:16px">${fmt(c.totais.valor)}</div></div>
+        <div><div style="font-size:10px;color:var(--muted)">Parcela/mês</div><div style="font-family:'Courier New',monospace;font-size:16px;color:var(--accent)">${fmt(c.totais.parcela)}</div></div>
+        <div><div style="font-size:10px;color:var(--muted)">Juros totais</div><div style="font-family:'Courier New',monospace;font-size:16px;color:var(--danger)">${fmt(c.totais.juros)}</div></div>
+        <div><div style="font-size:10px;color:var(--muted)">Prazo ef.</div><div style="font-family:'Courier New',monospace;font-size:16px">${c.totais.prazoMax}m</div></div>
+      </div>
+    </div>
+
+    <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Tranches</div>
+    ${tranchesHtml}
+
+    ${c.amorts && c.amorts.length ? `
+    <div style="margin-top:4px;padding:14px;background:rgba(61,117,78,0.06);border:1px solid rgba(61,117,78,0.25);border-radius:10px;">
+      <div style="font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">⚡ Pré-pagamentos</div>
+      <div style="font-size:13px;color:var(--text);line-height:1.8">${amortDesc}</div>
+    </div>` : ''}
+
+    ${ocHtml}
+  `;
+
+  modal.style.display = 'flex';
+}
+
+function fecharModal() {
+  document.getElementById('modal-cenario').style.display = 'none';
+}
+
+// Fecha ao clicar fora
+document.addEventListener('click', e => {
+  const modal = document.getElementById('modal-cenario');
+  if (e.target === modal) fecharModal();
+});
+
+// ==================== EDITAR CENÁRIO SALVO ====================
+function editarCenario(id) {
+  const lista = getCenariosSalvos();
+  const c = lista.find(x => x.id === id);
+  if (!c) return;
+
+  // Navega para o simulador
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('page-simulator').classList.add('active');
+  document.querySelectorAll('.nav-item')[1].classList.add('active');
+
+  // Limpa e reconstrói as tranches
+  document.getElementById('sim-tranches').innerHTML = '';
+  simTranches = []; simTrancheCount = 0; simResults = []; simAmorts = [];
+  document.getElementById('sim-btn-add').style.opacity = '1';
+  document.getElementById('sim-result').style.display = 'none';
+
+  // Adiciona cada tranche do cenário salvo
+  c.tranches.forEach((t, i) => {
+    simAddTranche();
+    const tid = simTranches[i]?.tid || document.getElementById('sim-tranches').children[i]?.id;
+    if (!tid) return;
+    // Encontra o produto pelo label
+    const prodMatch = SIM_PRODUCTS.find(p => p.label.replace(/^[^\s]+\s/,'') === t.label) ||
+                      SIM_PRODUCTS.find(p => t.label.includes(p.label.replace(/^[^\s]+\s/,'')));
+    if (prodMatch) {
+      const sel = document.getElementById(tid+'-prod');
+      if (sel) { sel.value = prodMatch.id; simOnProductChange(tid); }
+    }
+    const v = document.getElementById(tid+'-valor');
+    const tx = document.getElementById(tid+'-taxa');
+    const pr = document.getElementById(tid+'-prazo');
+    const si = document.getElementById(tid+'-sistema');
+  });
+
+  // Restaura amortizações
+  if (c.amorts && c.amorts.length) {
+    simAmorts = c.amorts.map(a => ({...a}));
+  }
+
+  // Atualiza nome do campo de salvar com o nome original
+  document.getElementById('save-nome').value = c.nome + ' (editado)';
+
+  // Scroll to top
+  document.querySelector('.main').scrollTop = 0;
+}
+
+// ==================== EXPORTAR PDF ====================
+function exportarPDF(nomeParam) {
+  if (!simResults.length) { alert('Simule um cenário primeiro e então exporte.'); return; }
+
+  const nome = nomeParam || document.getElementById('save-nome').value.trim() || 'Proposta de Crédito';
+  const data = new Date().toLocaleDateString('pt-BR', {day:'2-digit', month:'long', year:'numeric'});
+
+  // ── Helpers ────────────────────────────────────────────────────────────────
+  const fmtP = n => 'R$ ' + n.toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2});
+  const fmtN = (n, suf='') => n.toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2}) + suf;
+
+  const totalValor = simResults.reduce((s,r)=>s+r.valor,0);
+
+  // ── Recalcula COM aportes (fonte de verdade) ──────────────────────────────
+  const temAmorts = simAmorts && simAmorts.length > 0;
+
+  const comAmortResults = simResults.map((r, i) => {
+    if (r.isFullBullet) return { totalJuros: r.montante-r.valor, prazoEfetivo: r.prazo, parcela: 0 };
+    const amortList = [];
+    (simAmorts||[]).filter(a=>a.trancheIdx===i).forEach(a => {
+      if (a.tipo==='pontual') { amortList.push({mes:a.mes, valor:a.valor, modo:a.modo}); }
+      else { for (let m=a.inicio; m<=r.prazo; m+=a.freq) amortList.push({mes:m, valor:a.valor, modo:a.modo}); }
+    });
+    const calc = calcTrancheFluxo(r.valor, r.prazo, r.taxa, r.sistema, false, amortList);
+    return { totalJuros: calc.totalJuros, prazoEfetivo: calc.prazoEfetivo, parcela: calc.parcela };
+  });
+
+  const totalJuros   = comAmortResults.reduce((s,r)=>s+r.totalJuros,0);
+  const totalParcela = comAmortResults.reduce((s,r)=>s+r.parcela,0);
+  const maxPrazo     = Math.max(...comAmortResults.map(r=>r.prazoEfetivo));
+
+  // ── Comparativo com/sem pré-pagamento ─────────────────────────────────────
+  let comparativoHTML = '';
+
+  if (temAmorts) {
+    // Recalcula sem aportes para comparar
+    const semAmortResults = simResults.map(r => {
+      if (r.isFullBullet) return { totalJuros: r.totalJuros, prazoEfetivo: r.prazoEfetivo, parcela: 0 };
+      const calc = calcTrancheFluxo(r.valor, r.prazo, r.taxa, r.sistema, false, []);
+      return { totalJuros: calc.totalJuros, prazoEfetivo: calc.prazoEfetivo, parcela: calc.parcela };
+    });
+    const semJuros   = semAmortResults.reduce((s,r)=>s+r.totalJuros,0);
+    const semParcela = semAmortResults.reduce((s,r)=>s+r.parcela,0);
+    const semPrazo   = Math.max(...semAmortResults.map(r=>r.prazoEfetivo));
+    const economia   = semJuros - totalJuros;
+    const mesesGanhos = semPrazo - maxPrazo;
+
+    // Amort description
+    const amortDesc = simAmorts.map(a => {
+      const tLabel = simResults[a.trancheIdx]?.label.replace(/^[^\s]+\s/,'').substring(0,20)||'';
+      return a.tipo==='pontual'
+        ? `${fmtP(a.valor)} no mês ${a.mes}`
+        : `${fmtP(a.valor)} a cada ${a.freq} meses`;
+    }).join(' · ');
+
+    comparativoHTML = `
+      <div class="section">
+        <div class="section-title">Comparativo — Sem vs Com Pré-pagamento</div>
+        <div class="compare-note">Pré-pagamentos configurados: ${amortDesc}</div>
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Métrica</th>
+              <th class="col-sem">Sem pré-pagamento</th>
+              <th class="col-com">Com pré-pagamento</th>
+              <th class="col-ec">Diferença</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Prazo efetivo</td>
+              <td class="col-sem mono">${semPrazo} meses</td>
+              <td class="col-com mono green">${maxPrazo} meses</td>
+              <td class="col-ec mono green">−${mesesGanhos} meses</td>
+            </tr>
+            <tr>
+              <td>Parcela mensal</td>
+              <td class="col-sem mono">${fmtP(semParcela)}</td>
+              <td class="col-com mono">${fmtP(totalParcela)}</td>
+              <td class="col-ec mono">—</td>
+            </tr>
+            <tr>
+              <td>Total de juros</td>
+              <td class="col-sem mono red">${fmtP(semJuros)}</td>
+              <td class="col-com mono green">${fmtP(totalJuros)}</td>
+              <td class="col-ec mono green">−${fmtP(economia)}</td>
+            </tr>
+            <tr>
+              <td>Custo total</td>
+              <td class="col-sem mono">${fmtP(totalValor + semJuros)}</td>
+              <td class="col-com mono">${fmtP(totalValor + totalJuros)}</td>
+              <td class="col-ec mono green">−${fmtP(economia)}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="economia-box">
+          <span class="economia-label">Economia com pré-pagamento</span>
+          <span class="economia-valor">${fmtP(economia)}</span>
+        </div>
+      </div>`;
+  }
+
+  // ── Tranches HTML ──────────────────────────────────────────────────────────
+  const tranchesHTML = simResults.map(r => `
+    <tr>
+      <td>${r.label.replace(/^[^\s]+\s/,'')}</td>
+      <td class="mono">${fmtP(r.valor)}</td>
+      <td class="mono">${fmtN(r.taxa*100,'% a.m.')} · ${(Math.pow(1+r.taxa,12)-1)*100|0}% a.a.</td>
+      <td class="mono">${r.prazo}m ${r.isFullBullet?'Bullet':r.sistema?.toUpperCase()||'PRICE'}</td>
+      <td class="mono">${r.isFullBullet?'R$ 0 (Bullet)':fmtP(r.parcela)+'/mês'}</td>
+      <td class="mono red">${fmtP(r.totalJuros)}</td>
+    </tr>`).join('');
+
+  // ── RTS Logo SVG (pentagonal symbol, brand colors) ────────────────────────
+  const logoSVG = `<svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="50,5 95,34 80,85 20,85 5,34" fill="none" stroke="#3D754E" stroke-width="7"/>
+    <polygon points="50,18 83,39 72,75 28,75 17,39" fill="none" stroke="#3D754E" stroke-width="5"/>
+    <polygon points="50,31 71,45 63,65 37,65 29,45" fill="none" stroke="#3D754E" stroke-width="4"/>
+  </svg>`;
+
+  // ── Monta o HTML do PDF ────────────────────────────────────────────────────
+  const html = `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>${nome} — RTS Partners</title>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Ubuntu', sans-serif;
+    background: #F9F5EF;
+    color: #1A1A1B;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  @page { size: A4; margin: 0; }
+  @media print {
+    body { background: #F9F5EF; }
+    .no-print { display: none; }
+  }
+
+  /* HEADER */
+  .header {
+    background: #1A1A1B;
+    padding: 28px 40px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header-left { display: flex; align-items: center; gap: 14px; }
+  .brand-name {
+    font-family: 'Ubuntu', sans-serif;
+    color: #F9F5EF;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+  .brand-name span { font-weight: 300; }
+  .brand-sub {
+    font-family: 'Montserrat', sans-serif;
+    color: #3D754E;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .header-right { text-align: right; }
+  .doc-title {
+    font-family: 'Montserrat', sans-serif;
+    color: #F9F5EF;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .doc-date {
+    color: rgba(249,245,239,0.5);
+    font-size: 10px;
+    margin-top: 3px;
+  }
+
+  /* GREEN STRIPE */
+  .stripe { height: 4px; background: #3D754E; }
+
+  /* BODY */
+  .body { padding: 32px 40px; }
+
+  /* SUMMARY CARDS */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid rgba(26,26,27,0.1);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .card-label {
+    font-size: 9px;
+    color: rgba(26,26,27,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .card-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1A1A1B;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .card-value.green { color: #3D754E; }
+  .card-value.red   { color: #b94a48; }
+
+  /* SECTIONS */
+  .section { margin-bottom: 24px; }
+  .section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #3D754E;
+    padding-bottom: 6px;
+    border-bottom: 1.5px solid #3D754E;
+    margin-bottom: 12px;
+  }
+
+  /* TABLES */
+  table { width: 100%; border-collapse: collapse; font-size: 10.5px; }
+  th {
+    background: #1A1A1B;
+    color: #F9F5EF;
+    padding: 8px 10px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  td {
+    padding: 9px 10px;
+    border-bottom: 1px solid rgba(26,26,27,0.08);
+    color: #1A1A1B;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: rgba(26,26,27,0.02); }
+  .mono { font-family: 'Montserrat', sans-serif; font-size: 10px; }
+  .green { color: #3D754E; font-weight: 600; }
+  .red   { color: #b94a48; }
+
+  /* COMPARE TABLE */
+  .compare-note {
+    font-size: 10px;
+    color: rgba(26,26,27,0.5);
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  .compare-table th.col-sem { background: rgba(26,26,27,0.7); }
+  .compare-table th.col-com { background: #3D754E; }
+  .compare-table th.col-ec  { background: rgba(61,117,78,0.7); }
+  .col-sem, .col-com, .col-ec { text-align: right; }
+
+  /* ECONOMIA BOX */
+  .economia-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #3D754E;
+    color: #F9F5EF;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-top: 12px;
+  }
+  .economia-label { font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600; }
+  .economia-valor { font-size: 18px; font-family: 'Montserrat', sans-serif; font-weight: 700; }
+
+  /* FOOTER */
+  .footer {
+    background: #1A1A1B;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+  }
+  .footer-text { color: rgba(249,245,239,0.4); font-size: 9px; }
+  .footer-brand {
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(249,245,239,0.6);
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .rtv { display: flex; gap: 4px; font-size: 9px; color: rgba(249,245,239,0.4); margin-top: 4px; letter-spacing: 0.5px; }
+  .rtv span { color: #3D754E; font-weight: 700; }
+
+  /* PRINT BUTTON */
+  .print-bar {
+    position: fixed; top: 0; left: 0; right: 0;
+    background: #1A1A1B; padding: 10px 20px;
+    display: flex; gap: 12px; align-items: center;
+    z-index: 999;
+  }
+  .print-btn {
+    background: #3D754E; color: #F9F5EF; border: none;
+    padding: 8px 20px; border-radius: 6px;
+    font-family: 'Ubuntu', sans-serif; font-size: 13px;
+    font-weight: 600; cursor: pointer;
+  }
+  .print-hint { color: rgba(249,245,239,0.5); font-size: 12px; }
+  @media print { .print-bar { display: none; } body { padding-top: 0; } }
+  body { padding-top: 44px; }
+</style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <button class="print-btn" onclick="window.print()">↓ Salvar como PDF</button>
+  <span class="print-hint">No diálogo de impressão, selecione "Salvar como PDF" como destino</span>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    ${logoSVG}
+    <div>
+      <div class="brand-name"><strong>RTS</strong> <span>Partners</span></div>
+      <div class="brand-sub">Wealth Management</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="doc-title">${nome}</div>
+    <div class="doc-date">${data}</div>
+  </div>
+</div>
+<div class="stripe"></div>
+
+<div class="body">
+
+  <!-- RESUMO -->
+  <div class="summary-grid">
+    <div class="card">
+      <div class="card-label">Valor financiado</div>
+      <div class="card-value">${fmtP(totalValor)}</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Parcela mensal</div>
+      <div class="card-value green">${fmtP(totalParcela)}</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Total de juros</div>
+      <div class="card-value red">${fmtP(totalJuros)}</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Prazo efetivo</div>
+      <div class="card-value">${maxPrazo} meses</div>
+    </div>
+  </div>
+
+  <!-- TRANCHES -->
+  <div class="section">
+    <div class="section-title">Estrutura do Crédito</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Principal</th>
+          <th>Taxa</th>
+          <th>Prazo / Sistema</th>
+          <th>Parcela</th>
+          <th>Juros totais</th>
+        </tr>
+      </thead>
+      <tbody>${tranchesHTML}</tbody>
+    </table>
+  </div>
+
+  <!-- COMPARATIVO COM/SEM PRÉ-PAGAMENTO -->
+  ${comparativoHTML}
+
+  <!-- NOTAS -->
+  <div class="section">
+    <div class="section-title">Observações</div>
+    <table>
+      <tbody>
+        <tr><td>Taxas de referência de mercado. Sujeitas à análise de crédito e aprovação.</td></tr>
+        <tr><td>Cálculo não inclui IOF, seguros obrigatórios (MIP/DFI) ou custos cartorários.</td></tr>
+        <tr><td>Selic projetada pelo Focus BCB 27/03/2026: atual 14,50% → 12,50% (2026) → 10,50% (2027).</td></tr>
+        ${temAmorts ? '<tr><td>Pré-pagamentos considerados nesta proposta reduzem prazo e custo total conforme demonstrado acima.</td></tr>' : ''}
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div>
+    <div class="footer-brand">RTS Partners · Wealth Management</div>
+    <div class="rtv"><span>R</span>elacionamento · <span>T</span>ransparência · <span>S</span>erviço</div>
+  </div>
+  <div class="footer-text">Documento gerado em ${data} · Uso interno e do cliente</div>
+</div>
+
+</body>
+</html>`;
+
+  const win = window.open('', '_blank', 'width=900,height=700');
+  win.document.write(html);
+  win.document.close();
 }
 
 // Init simulator with one tranche
 function initSimulator() {
   if (document.getElementById('sim-tranches').children.length === 0) simAddTranche();
+}
+
+// ==================== API KEY MANAGEMENT ====================
+const APIKEY_STORAGE = 'rts_anthropic_key';
+
+function salvarApiKey() {
+  const key = document.getElementById('chat-apikey-input').value.trim();
+  if (!key.startsWith('sk-ant-')) {
+    document.getElementById('chat-apikey-status').innerHTML = '<span style="color:var(--danger)">⚠ Chave inválida. Deve começar com sk-ant-</span>';
+    return;
+  }
+  localStorage.setItem(APIKEY_STORAGE, key);
+  document.getElementById('chat-apikey-input').value = '';
+  atualizarEstadoChat();
+}
+
+function limparApiKey() {
+  if (!confirm('Remover a chave de API salva?')) return;
+  localStorage.removeItem(APIKEY_STORAGE);
+  atualizarEstadoChat();
+}
+
+function getApiKey() {
+  return localStorage.getItem(APIKEY_STORAGE) || '';
+}
+
+function atualizarEstadoChat() {
+  const key = getApiKey();
+  const hasKey = !!key;
+  const input  = document.getElementById('chat-input');
+  const btn    = document.getElementById('chat-send-btn');
+  const dot    = document.getElementById('chat-status-dot');
+  const status = document.getElementById('chat-apikey-status');
+  const clear  = document.getElementById('chat-apikey-clear');
+
+  if (hasKey) {
+    input.disabled = false;
+    input.placeholder = 'Ex: Qual produto é melhor para quem tem imóvel quitado e precisa de R$500k?';
+    btn.disabled = false;
+    dot.style.background = 'var(--success)';
+    dot.style.boxShadow = '0 0 8px rgba(74,222,128,0.6)';
+    status.innerHTML = '<span style="color:var(--success)">✓ Chave configurada</span>';
+    clear.style.display = 'inline-block';
+  } else {
+    input.disabled = true;
+    input.placeholder = 'Configure a chave de API para enviar mensagens...';
+    btn.disabled = true;
+    dot.style.background = 'var(--muted)';
+    dot.style.boxShadow = 'none';
+    status.innerHTML = '<span style="color:var(--muted)">Nenhuma chave configurada</span>';
+    clear.style.display = 'none';
+  }
 }
 
 // ==================== CHAT ====================
@@ -2092,17 +3687,36 @@ async function sendChat() {
   scrollChat();
 
   try {
+    const apiKey = getApiKey();
+    if (!apiKey) { typing.remove(); appendMsg('ai', 'Configure a chave de API antes de enviar mensagens.'); return; }
+
+    // Limita histórico às últimas 6 trocas (12 mensagens) para controlar custo
+    const historyTrimmed = chatHistory.slice(-12);
+
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true',
+      },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
+        max_tokens: 600,
         system: systemPrompt,
-        messages: chatHistory
+        messages: historyTrimmed,
       })
     });
     const data = await res.json();
+    if (data.error) {
+      typing.remove();
+      const msg = data.error.type === 'authentication_error'
+        ? 'Chave de API inválida ou expirada. Verifique em console.anthropic.com.'
+        : `Erro da API: ${data.error.message}`;
+      appendMsg('ai', msg);
+      return;
+    }
     const reply = data.content?.[0]?.text || 'Erro ao obter resposta.';
     chatHistory.push({ role: 'assistant', content: reply });
     typing.remove();
@@ -2149,7 +3763,48 @@ function askQuick(q) {
 // Init
 renderKB('clean');
 initSimulator();
+atualizarEstadoChat();
+
+// Verifica perfil do banker
+if (!getBankerAtual()) {
+  renderProfilesRecentes();
+  document.getElementById('modal-banker').style.display = 'flex';
+  setTimeout(() => document.getElementById('banker-nome-input')?.focus(), 300);
+} else {
+  atualizarSidebarBanker();
+}
 
 </script>
+<!-- MODAL DETALHE CENÁRIO -->
+<div id="modal-cenario" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:1000;align-items:center;justify-content:center;padding:24px;">
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:18px;width:100%;max-width:860px;max-height:90vh;overflow-y:auto;position:relative;">
+    <div style="position:sticky;top:0;background:var(--surface);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;justify-content:space-between;align-items:center;z-index:1;border-radius:18px 18px 0 0;">
+      <span style="font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px;">Detalhe do Cenário</span>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button id="btn-exportar-pdf" onclick="exportarPDF(window._modalCenarioNome)"
+          style="padding:8px 16px;background:#3D754E;border:none;border-radius:8px;color:#fff;font-family:'Ubuntu',sans-serif;font-size:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;">
+          ↓ Exportar PDF
+        </button>
+        <button onclick="fecharModal()" style="background:transparent;border:none;color:var(--muted);cursor:pointer;font-size:22px;line-height:1;padding:0 4px;">×</button>
+      </div>
+    </div>
+    <div id="modal-body" style="padding:24px;"></div>
+  </div>
+</div>
+
+<!-- ÁREA DE IMPRESSÃO PDF (oculta, só aparece no print) -->
+<div id="pdf-print-area" style="display:none;"></div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Montserrat:wght@300;400;600;700&display=swap');
+
+@media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body > *:not(#pdf-print-area) { display: none !important; }
+  #pdf-print-area { display: block !important; }
+  @page { margin: 0; size: A4; }
+}
+</style>
+
 </body>
 </html>
