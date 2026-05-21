@@ -638,16 +638,6 @@
           <span class="meta-pill highlight">SFH teto R$ 2,25M</span>
         </div>
       </div>
-      <div class="product-card" style="--card-color:#f472b6" onclick="openKB('consorcio')">
-        <div class="product-card-icon">🔄</div>
-        <h3>Consórcio Imobiliário</h3>
-        <p>Sem juros, apenas taxa de administração. Planejamento de longo prazo sem comprometer caixa.</p>
-        <div class="product-card-meta">
-          <span class="meta-pill">0,12% – 0,25% a.m.</span>
-          <span class="meta-pill">até 200x</span>
-          <span class="meta-pill highlight">Sem juros</span>
-        </div>
-      </div>
       <div class="product-card" style="--card-color:#fb923c" onclick="openKB('veiculo')">
         <div class="product-card-icon">🚗</div>
         <h3>Financiamento de Veículo</h3>
@@ -698,9 +688,7 @@
           <div class="comparison-bar"><div class="comparison-fill" style="width:35%;background:#34d399"></div></div>
         </div>
         <div>
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:13px;">
-            <span>Consórcio</span><span style="font-family:'Courier New',monospace;color:var(--success)">~0,18% a.m.</span>
-          </div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:13px;"></div>
           <div class="comparison-bar"><div class="comparison-fill" style="width:7%;background:#f472b6"></div></div>
         </div>
         <div>
@@ -1122,7 +1110,6 @@
         <div class="kb-nav-item" onclick="openKBTab('homeequity', this)">🏠 Home Equity</div>
         <div class="kb-nav-item" onclick="openKBTab('fimiob', this)">🏗️ Fin. Imobiliário</div>
         <div class="kb-nav-item" onclick="openKBTab('veiculo', this)">🚗 Fin. Veículo</div>
-        <div class="kb-nav-item" onclick="openKBTab('consorcio', this)">🔄 Consórcio</div>
       </div>
       <div class="kb-content" id="kb-content-area">
         <!-- Filled by JS -->
@@ -1139,7 +1126,7 @@
   </div>
   <div class="content">
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;">
-      <div class="compare-grid" style="grid-template-columns: 160px repeat(7, 1fr);">
+      <div class="compare-grid" style="grid-template-columns: 160px repeat(6, 1fr);">
         <!-- Headers -->
         <div class="compare-header label-col">Critério</div>
         <div class="compare-header"><span class="product-dot" style="background:#3D754E"></span>Clean</div>
@@ -1148,76 +1135,68 @@
         <div class="compare-header"><span class="product-dot" style="background:#34d399"></span>Home Equity</div>
         <div class="compare-header"><span class="product-dot" style="background:#60a5fa"></span>Fin. Imob.</div>
         <div class="compare-header"><span class="product-dot" style="background:#fb923c"></span>Fin. Veículo</div>
-        <div class="compare-header"><span class="product-dot" style="background:#f472b6"></span>Consórcio</div>
 
         <!-- CUSTO -->
         <div class="compare-section-header">Custo & Taxas</div>
 
         <div class="compare-cell label">Taxa Mín. (a.m.)</div>
-        <div class="compare-cell worst">1,50%</div>
-        <div class="compare-cell">0,70%</div>
-        <div class="compare-cell">0,70%</div>
-        <div class="compare-cell best">0,55%</div>
-        <div class="compare-cell best">0,60%</div>
-        <div class="compare-cell">0,99%</div>
-        <div class="compare-cell best">0,12%*</div>
+        <div class="compare-cell">1,80%</div>
+        <div class="compare-cell">0,79%</div>
+        <div class="compare-cell">0,79%</div>
+        <div class="compare-cell">0,55%</div>
+        <div class="compare-cell">0,63%</div>
+        <div class="compare-cell">1,20%</div>
 
         <div class="compare-cell label">Taxa Máx. (a.m.)</div>
-        <div class="compare-cell worst">4,00%</div>
-        <div class="compare-cell">1,50%</div>
-        <div class="compare-cell">1,50%</div>
+        <div class="compare-cell">5,00%</div>
+        <div class="compare-cell">1,80%</div>
+        <div class="compare-cell">1,80%</div>
+        <div class="compare-cell">1,43%</div>
         <div class="compare-cell">1,20%</div>
-        <div class="compare-cell">1,10%</div>
-        <div class="compare-cell worst">2,50%</div>
-        <div class="compare-cell best">0,25%*</div>
+        <div class="compare-cell">2,90%</div>
 
         <div class="compare-cell label">Estrutura de Juro</div>
         <div class="compare-cell">Amortizante</div>
         <div class="compare-cell">Amortizante</div>
-        <div class="compare-cell" style="color:var(--accent);font-weight:600">Bullet</div>
+        <div class="compare-cell" style="font-weight:600">Bullet (vencimento)</div>
         <div class="compare-cell">Amortizante</div>
         <div class="compare-cell">Amortizante</div>
         <div class="compare-cell">Amortizante</div>
-        <div class="compare-cell best">Sem juro</div>
 
         <!-- ACESSO -->
         <div class="compare-section-header">Acesso & Requisitos</div>
 
         <div class="compare-cell label">Garantia</div>
-        <div class="compare-cell best">Nenhuma</div>
+        <div class="compare-cell">Nenhuma</div>
         <div class="compare-cell">Ativo financeiro</div>
         <div class="compare-cell">Ativo financeiro</div>
         <div class="compare-cell">Imóvel</div>
         <div class="compare-cell">Imóvel adquirido</div>
         <div class="compare-cell">Veículo adquirido</div>
-        <div class="compare-cell">Nenhuma</div>
 
         <div class="compare-cell label">LTV Máximo</div>
         <div class="compare-cell">N/A</div>
         <div class="compare-cell">até 70%</div>
         <div class="compare-cell">até 70%</div>
         <div class="compare-cell">até 60%</div>
-        <div class="compare-cell best">80% SFH / SFI livre</div>
-        <div class="compare-cell">até 80%</div>
-        <div class="compare-cell">N/A</div>
+        <div class="compare-cell">80% SFH / SFI livre</div>
+        <div class="compare-cell">até 80–90%</div>
 
         <div class="compare-cell label">Prazo Máx.</div>
-        <div class="compare-cell worst">60m</div>
         <div class="compare-cell">60m</div>
-        <div class="compare-cell worst">60m</div>
+        <div class="compare-cell">60m</div>
+        <div class="compare-cell">60m</div>
         <div class="compare-cell">240m</div>
-        <div class="compare-cell best">420m</div>
+        <div class="compare-cell">420m</div>
         <div class="compare-cell">60m</div>
-        <div class="compare-cell">200m</div>
 
         <div class="compare-cell label">Aprovação</div>
-        <div class="compare-cell best">Rápida</div>
-        <div class="compare-cell best">Rápida</div>
-        <div class="compare-cell best">Rápida</div>
-        <div class="compare-cell">Média</div>
-        <div class="compare-cell worst">Lenta</div>
-        <div class="compare-cell best">Rápida</div>
-        <div class="compare-cell">Imediata</div>
+        <div class="compare-cell">1–3 dias úteis</div>
+        <div class="compare-cell">2–5 dias úteis</div>
+        <div class="compare-cell">2–5 dias úteis</div>
+        <div class="compare-cell">15–45 dias úteis</div>
+        <div class="compare-cell">30–90 dias úteis</div>
+        <div class="compare-cell">1–3 dias úteis</div>
 
         <!-- PERFIL -->
         <div class="compare-section-header">Perfil & Uso Ideal</div>
@@ -1229,46 +1208,41 @@
         <div class="compare-cell">R$ 100k</div>
         <div class="compare-cell">R$ 50k</div>
         <div class="compare-cell">R$ 20k</div>
-        <div class="compare-cell">R$ 50k</div>
 
         <div class="compare-cell label">Volume Máx.</div>
-        <div class="compare-cell worst">R$ 300k</div>
+        <div class="compare-cell">R$ 300k</div>
         <div class="compare-cell">R$ 10M+</div>
         <div class="compare-cell">R$ 10M+</div>
         <div class="compare-cell">~R$ 20M*</div>
         <div class="compare-cell">R$ 5M+</div>
         <div class="compare-cell">R$ 500k</div>
-        <div class="compare-cell">R$ 10M+</div>
 
         <div class="compare-cell label">Uso do Recurso</div>
         <div class="compare-cell">Livre</div>
         <div class="compare-cell">Livre</div>
         <div class="compare-cell">Livre</div>
         <div class="compare-cell">Livre</div>
-        <div class="compare-cell worst">Imóvel</div>
-        <div class="compare-cell worst">Veículo</div>
-        <div class="compare-cell worst">Imóvel/Bem</div>
+        <div class="compare-cell">Imóvel</div>
+        <div class="compare-cell">Veículo</div>
 
         <div class="compare-cell label">Liquidez Ativo</div>
-        <div class="compare-cell best">Mantém</div>
+        <div class="compare-cell">Mantém</div>
         <div class="compare-cell">Bloqueia</div>
         <div class="compare-cell">Bloqueia</div>
-        <div class="compare-cell worst">Bloqueia</div>
-        <div class="compare-cell worst">Bloqueia</div>
-        <div class="compare-cell worst">Bloqueia</div>
-        <div class="compare-cell best">Mantém</div>
+        <div class="compare-cell">Bloqueia</div>
+        <div class="compare-cell">Bloqueia</div>
+        <div class="compare-cell">Bloqueia</div>
 
         <div class="compare-cell label">Caixa Mensal</div>
         <div class="compare-cell">Normal</div>
         <div class="compare-cell">Normal</div>
-        <div class="compare-cell best" style="color:var(--accent)">Mínimo (só juros)</div>
-        <div class="compare-cell">Normal</div>
+        <div class="compare-cell" style="color:var(--accent)">Zero (tudo no final)</div>
         <div class="compare-cell">Normal</div>
         <div class="compare-cell">Normal</div>
         <div class="compare-cell">Normal</div>
       </div>
     </div>
-    <p style="font-size:12px;color:var(--muted);margin-top:12px;">* Consórcio: taxa de administração, não juro. Sem acesso imediato ao recurso (depende de sorteio/lance). Bullet: principal integralmente no vencimento. Home Equity (~R$20M): valor indicativo — necessário cotar, depende da garantia e da análise do banco. SFH 2025/2026: teto do imóvel R$ 2,25M, cota Caixa até 80% no SAC.</p>
+    <p style="font-size:12px;color:var(--muted);margin-top:12px;">Taxas de referência de mercado — abril/2026. Fontes: Banco Central do Brasil, Procon-SP, Creditas, Bradesco, Santander, C6 Bank. Sujeitas a análise de crédito e perfil do cliente. Bullet: principal integralmente no vencimento. Home Equity (~R$20M): depende do valor da garantia e análise do banco. SFH 2025/2026: teto do imóvel R$2,25M, cota Caixa até 80% SAC.</p>
   </div>
 </div>
 
@@ -1331,7 +1305,6 @@
           <button class="quick-btn" onclick="askQuick('Cliente tem R$2M em CDB. Qual o melhor produto para acessar liquidez sem vender o ativo?')">Cliente com R$2M em CDB – melhor produto?</button>
           <button class="quick-btn" onclick="askQuick('Qual produto indica para quem não tem garantia e precisa de R$150k em 30 dias?')">Sem garantia, precisa de R$150k urgente</button>
           <button class="quick-btn" onclick="askQuick('Quais os documentos necessários para um Home Equity?')">Docs necessários para Home Equity</button>
-          <button class="quick-btn" onclick="askQuick('Explica como funciona o consórcio imobiliário e quando vale a pena indicar')">Quando indicar consórcio?</button>
           <button class="quick-btn" onclick="askQuick('Cliente quer comprar imóvel de R$1,5M. Compara as opções disponíveis.')">Comprar imóvel R$1,5M – opções?</button>
         </div>
         <div class="quick-panel">
@@ -1367,7 +1340,7 @@ const kbData = {
     icon: '💳',
     desc: 'O crédito pessoal (clean) é a modalidade mais simples e acessível. Não exige garantias reais, sendo aprovado com base na análise de crédito, renda comprovada e histórico no bureau. Indicado para necessidades pontuais de liquidez, emergências ou projetos de curto prazo.',
     tabela: [
-      ['Taxa mínima', '1,50% a.m.'],
+      ['Taxa mínima', '1,80% a.m. (clientes preferenciais)'],
       ['Taxa máxima', '4,00% a.m.'],
       ['Prazo máximo', '60 meses'],
       ['Volume mínimo', 'R$ 5.000'],
@@ -1386,7 +1359,7 @@ const kbData = {
     icon: '🏛️',
     desc: 'Modalidade que utiliza ativos financeiros líquidos como garantia: CDB, LCA, LCI, fundos de renda fixa, ações (com haircut), debêntures. O ativo permanece na custódia mas fica bloqueado para resgate durante o período da operação. Permite taxas muito mais competitivas pois o risco do credor é reduzido.',
     tabela: [
-      ['Taxa mínima', '0,70% a.m. (CDI + spread)'],
+      ['Taxa mínima', '0,79% a.m. (CDI + spread)'],
       ['Taxa máxima', '1,50% a.m.'],
       ['Prazo máximo', '60 meses (5 anos)'],
       ['LTV máximo', '70% do valor dos ativos'],
@@ -1405,7 +1378,7 @@ const kbData = {
     icon: '🏠',
     desc: 'O Home Equity permite usar um imóvel já quitado (ou com saldo devedor residual pequeno) como garantia para obter crédito. O cliente continua morando no imóvel; o banco registra a alienação fiduciária no cartório. Oferece as menores taxas do crédito ao consumidor com prazos longos e valores elevados.',
     tabela: [
-      ['Taxa mínima', '0,55% a.m. + IPCA ou TR'],
+      ['Taxa mínima', '0,55% a.m. + IPCA (C6 Pós) ou 1,09% a.m. + IPCA (Creditas)'],
       ['Taxa máxima', '1,20% a.m.'],
       ['Prazo máximo', '240 meses (20 anos)'],
       ['LTV máximo', '60% do valor do imóvel'],
@@ -1441,32 +1414,13 @@ const kbData = {
     cons: ['Recurso restrito à compra/construção', 'Processo mais burocrático', 'Exige seguro MIP e DFI', 'Atualização TR no saldo (risco inflação)', 'Cota Caixa caiu de 90% para 80% no SAC'],
     quando: 'Indicado exclusivamente para compra ou construção de imóvel. Para imóveis até R$ 2,25M o SFH é o mais vantajoso — permite FGTS e taxas reguladas. Acima disso, entra no SFI com condições de mercado. A mudança de 2025 que ampliou o teto beneficia diretamente a classe média em capitais como SP e RJ, onde imóveis de R$ 1,5M–2,25M são comuns.'
   },
-  consorcio: {
-    title: 'Consórcio Imobiliário',
-    badge: 'Sem Juros · Planejamento de Longo Prazo',
-    icon: '🔄',
-    desc: 'O consórcio é uma modalidade de autofinanciamento coletivo administrado por uma administradora credenciada pelo BCB. Não há juros, apenas taxa de administração e fundo de reserva. Os participantes são contemplados por sorteio mensal ou por oferta de lance. Não há acesso imediato ao recurso.',
-    tabela: [
-      ['Taxa de administração', '12% – 25% total (0,12% – 0,25% a.m.)'],
-      ['Prazo máximo', '200 meses'],
-      ['Crédito (carta)', 'R$ 50.000 – R$ 10.000.000+'],
-      ['Juros', 'Zero (apenas adm + fundo reserva)'],
-      ['Acesso ao recurso', 'Por sorteio ou lance'],
-      ['Lance mínimo típico', '20% – 30% do crédito'],
-      ['Reajuste da carta', 'INCC ou IPCA'],
-      ['Regulação', 'BCB (Res. 4.432/2015)'],
-    ],
-    pros: ['Sem cobrança de juros', 'Custo total muito inferior', 'Boa opção para planejamento', 'Possibilidade de dar lance para antecipar'],
-    cons: ['Sem acesso imediato ao recurso', 'Sorteio imprevisível', 'Lance pode ser necessário (custo adicional)', 'Não serve para urgências'],
-    quando: 'Indicado para clientes que planejam aquisição futura de imóvel e não têm urgência. Pode ser combinado com financiamento (usa carta de consórcio como entrada). Excellent para clientes que teriam disciplina de poupar mas preferem o compromisso da parcela. Não indicado se o cliente precisa do imóvel imediatamente.'
-  },
   veiculo: {
     title: 'Financiamento de Veículo',
     badge: 'CDC / Leasing · Novo ou Usado',
     icon: '🚗',
     desc: 'O financiamento de veículo é uma das modalidades mais utilizadas no Brasil. O bem adquirido (carro, moto, caminhão) serve como garantia através de alienação fiduciária. Pode ser feito via CDC (Crédito Direto ao Consumidor) ou Leasing. Taxas dependem do ano do veículo, prazo, perfil de crédito e relacionamento com o banco.',
     tabela: [
-      ['Taxa mínima (novo)', '0,99% a.m.'],
+      ['Taxa mínima (novo)', '1,20% a.m. (Bradesco/montadoras)'],
       ['Taxa máxima (usado)', '2,50% a.m.'],
       ['Prazo máximo', '60 meses (5 anos)'],
       ['Entrada mínima típica', '10% – 20% do valor'],
@@ -1545,7 +1499,7 @@ function openKB(product) {
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   // find kb nav item
   const items = document.querySelectorAll('.kb-nav-item');
-  const map = {clean:0,garantia:1,'garantia-bullet':2,homeequity:3,fimiob:4,veiculo:5,consorcio:6};
+  const map = {clean:0,garantia:1,'garantia-bullet':2,homeequity:3,fimiob:4,veiculo:5};
   items.forEach(i=>i.classList.remove('active'));
   if(map[product] !== undefined) items[map[product]].classList.add('active');
   renderKB(product);
@@ -1555,12 +1509,11 @@ function openKB(product) {
 // ==================== UNIFIED SIMULATOR ====================
 const SIM_PRODUCTS = [
   { id: 'clean',           label: '💳 Crédito Clean',          taxa: 2.5,  maxPrazo: 60,  bullet: false, fullbullet: false },
-  { id: 'garantia',        label: '🏛️ Garantia (convencional)', taxa: 1.0,  maxPrazo: 60,  bullet: false, fullbullet: false },
-  { id: 'garantia-bullet', label: '⚡ Garantia Bullet Total',   taxa: 1.0,  maxPrazo: 60,  bullet: true,  fullbullet: true  },
+  { id: 'garantia',        label: '🏛️ Garantia (convencional)', taxa: 1.1,  maxPrazo: 60,  bullet: false, fullbullet: false },
+  { id: 'garantia-bullet', label: '⚡ Garantia Bullet Total',   taxa: 1.1,  maxPrazo: 60,  bullet: true,  fullbullet: true  },
   { id: 'homeequity',      label: '🏠 Home Equity',             taxa: 0.87, maxPrazo: 240, bullet: false, fullbullet: false },
-  { id: 'fimiob',          label: '🏗️ Fin. Imobiliário',        taxa: 0.75, maxPrazo: 420, bullet: false, fullbullet: false },
-  { id: 'veiculo',         label: '🚗 Fin. Veículo',            taxa: 1.49, maxPrazo: 60,  bullet: false, fullbullet: false },
-  { id: 'consorcio',       label: '🔄 Consórcio',               taxa: 0.18, maxPrazo: 200, bullet: false, fullbullet: false },
+  { id: 'fimiob',          label: '🏗️ Fin. Imobiliário',        taxa: 0.80, maxPrazo: 420, bullet: false, fullbullet: false },
+  { id: 'veiculo',         label: '🚗 Fin. Veículo',            taxa: 1.55, maxPrazo: 60,  bullet: false, fullbullet: false },
 ];
 const SIM_COLORS = ['#3D754E','#7b68ee','#34d399','#60a5fa','#f472b6','#fb923c','#a78bfa'];
 
@@ -3207,70 +3160,88 @@ function exportarPDF(nomeParam) {
   let comparativoHTML = '';
 
   if (temAmorts) {
-    // Recalcula sem aportes para comparar
     const semAmortResults = simResults.map(r => {
       if (r.isFullBullet) return { totalJuros: r.totalJuros, prazoEfetivo: r.prazoEfetivo, parcela: 0 };
       const calc = calcTrancheFluxo(r.valor, r.prazo, r.taxa, r.sistema, false, []);
       return { totalJuros: calc.totalJuros, prazoEfetivo: calc.prazoEfetivo, parcela: calc.parcela };
     });
-    const semJuros   = semAmortResults.reduce((s,r)=>s+r.totalJuros,0);
-    const semParcela = semAmortResults.reduce((s,r)=>s+r.parcela,0);
-    const semPrazo   = Math.max(...semAmortResults.map(r=>r.prazoEfetivo));
-    const economia   = semJuros - totalJuros;
-    const mesesGanhos = semPrazo - maxPrazo;
+    const semJuros      = semAmortResults.reduce((s,r)=>s+r.totalJuros,0);
+    const semParcela    = semAmortResults.reduce((s,r)=>s+r.parcela,0);
+    const semPrazo      = Math.max(...semAmortResults.map(r=>r.prazoEfetivo));
+    const prazoOriginalMax = semPrazo;
+    const economia      = semJuros - totalJuros;
+    const mesesGanhos   = semPrazo - maxPrazo;
+    const custoSem      = totalValor + semJuros;
+    const custoCom      = totalValor + totalJuros;
 
-    // Amort description
-    const amortDesc = simAmorts.map(a => {
-      const tLabel = simResults[a.trancheIdx]?.label.replace(/^[^\s]+\s/,'').substring(0,20)||'';
-      return a.tipo==='pontual'
+    // Total de aportes
+    const totalAmorts = simAmorts.reduce((s,a) => {
+      if (a.tipo==='pontual') return s + a.valor;
+      const n = Math.floor((maxPrazo - (a.inicio||a.freq)) / a.freq) + 1;
+      return s + a.valor * Math.max(1, n);
+    }, 0);
+
+    const amortDesc = simAmorts.map(a =>
+      a.tipo==='pontual'
         ? `${fmtP(a.valor)} no mês ${a.mes}`
-        : `${fmtP(a.valor)} a cada ${a.freq} meses`;
-    }).join(' · ');
+        : `${fmtP(a.valor)} a cada ${a.freq} meses`
+    ).join(' · ');
+
+    // Narrativa em linguagem clara
+    const anosStr = m => { const a=Math.floor(m/12),r=m%12; if(a===0)return`${r} ${r===1?'mês':'meses'}`; if(r===0)return`${a} ${a===1?'ano':'anos'}`; return`${a} ${a===1?'ano':'anos'} e ${r} ${r===1?'mês':'meses'}`; };
+    const fmtKK = n => n>=1e6?'R$ '+(n/1e6).toFixed(1).replace('.',',')+' milhões':n>=1e3?'R$ '+(n/1e3).toFixed(0)+' mil':fmtP(n);
+
+    const narrativa = `
+      <p>Financiando <strong>${fmtP(totalValor)}</strong> nas condições desta proposta, sem qualquer pagamento antecipado, o custo total em juros ao longo de <strong>${anosStr(semPrazo)}</strong> seria de <strong>${fmtKK(semJuros)}</strong> — elevando o custo total do crédito a <strong>${fmtKK(custoSem)}</strong>.</p>
+      <p>Com os pré-pagamentos configurados (${amortDesc}), o prazo cai para <strong>${anosStr(maxPrazo)}</strong> e o custo total em juros se reduz para <strong>${fmtKK(totalJuros)}</strong>. Custo total: <strong>${fmtKK(custoCom)}</strong>.</p>
+      <p><strong>A diferença final é de <span style="color:#3D754E">${fmtKK(economia)}</span> em juros a menos</strong> — redução de ${Math.round(economia/semJuros*100)}% no custo financeiro do crédito.${mesesGanhos>0?' O contrato encerra '+anosStr(mesesGanhos)+' antes do prazo original.':''}</p>`;
 
     comparativoHTML = `
       <div class="section">
-        <div class="section-title">Comparativo — Sem vs Com Pré-pagamento</div>
-        <div class="compare-note">Pré-pagamentos configurados: ${amortDesc}</div>
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th>Métrica</th>
-              <th class="col-sem">Sem pré-pagamento</th>
-              <th class="col-com">Com pré-pagamento</th>
-              <th class="col-ec">Diferença</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Prazo efetivo</td>
-              <td class="col-sem mono">${semPrazo} meses</td>
-              <td class="col-com mono green">${maxPrazo} meses</td>
-              <td class="col-ec mono green">−${mesesGanhos} meses</td>
-            </tr>
-            <tr>
-              <td>Parcela mensal</td>
-              <td class="col-sem mono">${fmtP(semParcela)}</td>
-              <td class="col-com mono">${fmtP(totalParcela)}</td>
-              <td class="col-ec mono">—</td>
-            </tr>
-            <tr>
-              <td>Total de juros</td>
-              <td class="col-sem mono red">${fmtP(semJuros)}</td>
-              <td class="col-com mono green">${fmtP(totalJuros)}</td>
-              <td class="col-ec mono green">−${fmtP(economia)}</td>
-            </tr>
-            <tr>
-              <td>Custo total</td>
-              <td class="col-sem mono">${fmtP(totalValor + semJuros)}</td>
-              <td class="col-com mono">${fmtP(totalValor + totalJuros)}</td>
-              <td class="col-ec mono green">−${fmtP(economia)}</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="economia-box">
-          <span class="economia-label">Economia com pré-pagamento</span>
-          <span class="economia-valor">${fmtP(economia)}</span>
+        <div class="section-title">Comparativo — Seguir até o vencimento vs Pré-pagamento</div>
+        <p class="compare-note" style="margin-bottom:14px;">Pré-pagamentos: ${amortDesc}</p>
+
+        <!-- Dois blocos lado a lado -->
+        <div class="compare-cards">
+          <div class="cc-block">
+            <div class="cc-tag">Seguir até o vencimento</div>
+            <div class="cc-row"><span class="cc-label">Prazo</span><span class="cc-val">${semPrazo} meses (${anosStr(semPrazo)})</span></div>
+            <div class="cc-row"><span class="cc-label">Parcela mensal</span><span class="cc-val">${fmtP(semParcela)}</span></div>
+            <div class="cc-row"><span class="cc-label">Total de juros</span><span class="cc-val red">${fmtP(semJuros)}</span></div>
+            <div class="cc-row"><span class="cc-label">Aportes extras</span><span class="cc-val">–</span></div>
+            <div class="cc-row"><span class="cc-label">Custo total</span><span class="cc-val red">${fmtP(custoSem)}</span></div>
+          </div>
+          <div class="cc-block highlight">
+            <div class="cc-tag green">Com pré-pagamento</div>
+            <div class="cc-row"><span class="cc-label">Prazo</span><span class="cc-val green">${maxPrazo} meses (${anosStr(maxPrazo)})</span></div>
+            <div class="cc-row"><span class="cc-label">Parcela mensal</span><span class="cc-val">${fmtP(totalParcela)}</span></div>
+            <div class="cc-row"><span class="cc-label">Total de juros</span><span class="cc-val green">${fmtP(totalJuros)}</span></div>
+            <div class="cc-row"><span class="cc-label">Aportes extras</span><span class="cc-val">${fmtP(totalAmorts)}</span></div>
+            <div class="cc-row"><span class="cc-label">Custo total</span><span class="cc-val green">${fmtP(custoCom)}</span></div>
+          </div>
         </div>
+
+        <!-- Delta box — diferença final -->
+        <div class="delta-box">
+          <div class="delta-item">
+            <div class="delta-label">Economia em juros</div>
+            <div class="delta-val green">${fmtP(economia)}</div>
+            <div class="delta-sub">−${Math.round(economia/semJuros*100)}% do custo financeiro</div>
+          </div>
+          <div class="delta-item">
+            <div class="delta-label">Prazo reduzido</div>
+            <div class="delta-val green">${mesesGanhos > 0 ? anosStr(mesesGanhos) : '–'}</div>
+            <div class="delta-sub">${semPrazo}m → ${maxPrazo}m</div>
+          </div>
+          <div class="delta-item">
+            <div class="delta-label">Custo total — diferença</div>
+            <div class="delta-val green">−${fmtP(custoSem - custoCom)}</div>
+            <div class="delta-sub">${fmtP(custoSem)} vs ${fmtP(custoCom)}</div>
+          </div>
+        </div>
+
+        <!-- Narrativa -->
+        <div class="narrativa">${narrativa}</div>
       </div>`;
   }
 
@@ -3425,6 +3396,98 @@ function exportarPDF(nomeParam) {
   .mono { font-family: 'Montserrat', sans-serif; font-size: 10px; }
   .green { color: #3D754E; font-weight: 600; }
   .red   { color: #b94a48; }
+
+  /* COMPARE CARDS — dois blocos lado a lado */
+  .compare-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .cc-block {
+    border-radius: 8px;
+    padding: 20px;
+    border: 1.5px solid rgba(26,26,27,0.12);
+    background: #fff;
+  }
+  .cc-block.highlight {
+    border-color: #3D754E;
+    background: rgba(61,117,78,0.04);
+  }
+  .cc-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(26,26,27,0.4);
+    margin-bottom: 12px;
+  }
+  .cc-tag.green { color: #3D754E; }
+  .cc-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(26,26,27,0.06);
+    font-size: 10.5px;
+  }
+  .cc-row:last-child { border-bottom: none; }
+  .cc-label { color: rgba(26,26,27,0.55); }
+  .cc-val { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 11px; }
+  .cc-val.red { color: #b94a48; }
+  .cc-val.green { color: #3D754E; }
+
+  /* DELTA BOX — diferença final */
+  .delta-box {
+    background: #1A1A1B;
+    border-radius: 8px;
+    padding: 20px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  .delta-item { padding: 0 16px; }
+  .delta-item:not(:last-child) { border-right: 1px solid rgba(249,245,239,0.1); }
+  .delta-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(249,245,239,0.4);
+    margin-bottom: 6px;
+  }
+  .delta-val {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #F9F5EF;
+  }
+  .delta-val.green { color: #6ee7b7; }
+  .delta-sub {
+    font-size: 9px;
+    color: rgba(249,245,239,0.35);
+    margin-top: 3px;
+  }
+
+  /* NARRATIVA */
+  .narrativa {
+    background: rgba(61,117,78,0.05);
+    border-left: 3px solid #3D754E;
+    padding: 16px 18px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 20px;
+  }
+  .narrativa p {
+    font-size: 11px;
+    line-height: 1.75;
+    color: #2a2a2a;
+    margin-bottom: 8px;
+  }
+  .narrativa p:last-child { margin-bottom: 0; }
 
   /* COMPARE TABLE */
   .compare-note {
